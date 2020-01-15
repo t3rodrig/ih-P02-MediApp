@@ -1,0 +1,19 @@
+{
+  "name": "mediapp",
+  "version": "1.0.0",
+  "description": "mediApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eamzea/mediApp.git"
+  },
+  "author": "Edgar Zea & Tonalli Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eamzea/mediApp/issues"
+  },
+  "homepage": "https://github.com/eamzea/mediApp#readme"
+}
