@@ -41,7 +41,7 @@ const index = require("./routes/index.route");
 app.use("/", index);
 
 app.all("*", (req, res, next) => {
-  res.render("error");
+  res.render("/");
 });
 
 // LISTEN

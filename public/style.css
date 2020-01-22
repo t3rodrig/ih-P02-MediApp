@@ -1,3 +1,10 @@
 .navbar-nav {
   width: 50%;
 }
+
+.index {
+  background-image: url("./images/bg-index.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
