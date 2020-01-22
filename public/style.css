@@ -1,5 +1,13 @@
+nav {
+  height: 7.5vh;
+}
+
 .navbar-nav {
-  width: 50%;
+  width: 55%;
+}
+
+footer {
+  height: 10vh;
 }
 
 .index {
