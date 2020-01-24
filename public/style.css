@@ -1,3 +1,7 @@
+body {
+  background-color: #f7f7f2;
+}
+
 nav {
   height: 7.5vh;
 }
@@ -6,7 +10,7 @@ nav {
   width: 55%;
 }
 
-footer {
+.footer {
   height: 10vh;
 }
 
@@ -15,4 +19,37 @@ footer {
   background-size: cover;
   background-position: center;
   height: 85vh;
+}
+
+/* Sign up */
+
+.signup-form {
+  background-image: url("./images/bg-sign-form.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+}
+
+.user-card {
+  background-color: #fcfcfc;
+  box-shadow: -10px -10px 20px 0px #565758, 10px 10px 20px 0px #151518;
+  border-radius: 10px;
+  height: 50vh;
+  transition: all 1s;
+}
+
+.user-card:hover {
+  transform: scale(1.05);
+}
+
+.user-card h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.user-card ul {
+  font-family: "Raleway", sans-serif;
+}
+
+.user-card ul li {
+  margin: 10px 0;
 }
