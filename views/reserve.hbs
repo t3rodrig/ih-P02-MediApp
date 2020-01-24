@@ -1,0 +1,35 @@
+<div class="row">
+    {{#each days}}
+        <div class="col">
+            <h4>{{@key}}</h4>
+        </div>
+    {{/each}}
+    {{!-- <div class="col">
+        Lunes
+    </div>
+    <div class="col">
+        Martes
+    </div>
+    <div class="col">
+        Miércoles
+    </div>
+    <div class="col">
+        Jueves
+    </div>
+    <div class="col">
+        Viernes
+    </div>
+    <div class="col">
+        Sábado
+    </div>
+    <div class="col">
+        Domingo
+    </div> --}}
+</div>
+<div class="row">
+        {{#each days}}
+        <div class="col">
+            <h4>{{this}}</h4>
+        </div>
+    {{/each}}
+</div>
