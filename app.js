@@ -40,9 +40,15 @@ app.use(
 const index = require("./routes/index.route");
 app.use("/", index);
 
-app.all("*", (req, res, next) => {
-  res.render("/");
-});
+const login = require("./routes/login.route");
+app.use("/login", login);
+
+const signup = require("./routes/signup.route");
+app.use("/signup", signup);
+
+// app.all("*", (req, res, next) => {
+//   res.render("/");
+// });
 
 // LISTEN
 app.listen(3000, () => console.log(`Servidor listo en el puerto 3000`));
