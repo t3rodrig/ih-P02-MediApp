@@ -1,10 +1,8 @@
-require('dotenv').config();
+require("dotenv").config();
 const mongoose = require('mongoose');
 const Patient = require('../models/patient');
 
-const connectDB = require("./db");
-connectDB();
-
+mongoose.connect(process.env.URL_DB);
 Patient.collection.drop();
 
 const patients = [
@@ -17,15 +15,18 @@ const patients = [
     name: "Diana",
     paternalLastName: "García",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "Andrea",
     paternalLastName: "López",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "Ana",
     paternalLastName: "Martínez",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "María",
     paternalLastName: "Rodríguez",
     email: "hello@example.com"
@@ -39,15 +40,18 @@ const patients = [
     name: "Daniela",
     paternalLastName: "Pérez",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "Alejandra",
     paternalLastName: "Sánchez",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "Adriana",
     paternalLastName: "Gómez",
     email: "hello@example.com"
-  },  {
+  },  
+  {
     name: "Karla",
     paternalLastName: "Flores",
     email: "hello@example.com"
