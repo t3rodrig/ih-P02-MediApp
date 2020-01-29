@@ -1,18 +1,20 @@
 const express = require("express");
 const router = express.Router();
 
-const Patient = require('../models/patient');
+const Patient = require("../models/Patient");
 
 router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-router.get('/patients', (req, res, next) => {
+router.get("/patients", (req, res, next) => {
   Patient.find()
     .then(patients => {
-      res.render('patients', {patients});
+      res.render("patients", { patients });
     })
-    .catch(err => console.log('Error while getting the patients from DB:', err));
+    .catch(err =>
+      console.log("Error while getting the patients from DB:", err)
+    );
 });
 
 router.get("/reserve", (req, res, next) => {
@@ -25,11 +27,11 @@ router.get("/reserve", (req, res, next) => {
     ...];
   */
   const days = {
-    'Lunes': ["10:00", "11:00"],
-    'Martes': ["12:00", "13:00"],
-    'Miércoles': ["15:00", "16:00"]
+    Lunes: ["10:00", "11:00"],
+    Martes: ["12:00", "13:00"],
+    Miércoles: ["15:00", "16:00"]
   };
-  res.render('reserve', {days});
+  res.render("reserve", { days });
 });
 
 module.exports = router;
