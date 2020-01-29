@@ -16,9 +16,13 @@ router.post("/doctor", async (req, res, next) => {
   const password = req.body.inputPassword;
   const confirmPassword = req.body.inputConfirmPassword;
 
-  const isEmpty = [name, idCard, email, password, confirmPassword].some(
-    element => element === ""
-  );
+  const isEmpty = [
+    name, 
+    idCard, 
+    email, 
+    password, 
+    confirmPassword
+  ].some(element => element === "");
 
   try {
     if (isEmpty) {
@@ -49,7 +53,9 @@ router.post("/doctor", async (req, res, next) => {
 
       await Doctor.create({ name, password: hashPass, email });
     }
-  } catch {}
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 router.post("/patient", async (req, res, next) => {
