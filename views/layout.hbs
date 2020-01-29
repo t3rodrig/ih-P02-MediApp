@@ -29,8 +29,12 @@
 						Buscar Médico
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					{{#if user}}
+            <a class="dropdown-item" href="/logout">Log Out</a>
+					{{else}}
             <a class="dropdown-item" href="/login">Inicia sesión</a>
             <a class="dropdown-item" href="/signup">Regístrate</a>
+					{{/if}}
           </div>
         </li>
       </ul>

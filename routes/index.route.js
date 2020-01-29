@@ -1,10 +1,22 @@
 const express = require("express");
 const router = express.Router();
-
+const Doctor = require("../models/Doctor");
 const Patient = require("../models/Patient");
 
 router.get("/", (req, res, next) => {
+  const user = req.session.currentUser;
+
+  if (user) {
+    res.render("index", user);
+  }
+
   res.render("index");
+});
+
+router.get("logout", (req, res, next) => {
+  req.session.destroy(err => {
+    res.redirect("/");
+  });
 });
 
 router.get("/patients", (req, res, next) => {

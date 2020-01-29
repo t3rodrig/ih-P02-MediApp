@@ -46,6 +46,9 @@ app.use("/login", login);
 const signup = require("./routes/signup.route");
 app.use("/signup", signup);
 
+const profile = require("./routes/profile.route");
+app.use("/profile", profile);
+
 // app.all("*", (req, res, next) => {
 //   res.render("/");
 // });
