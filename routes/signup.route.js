@@ -16,8 +16,15 @@ router.post("/doctor", async (req, res, next) => {
   const password = req.body.inputPassword;
   const confirmPassword = req.body.inputConfirmPassword;
 
+  const isEmpty = [
+    name, 
+    idCard, 
+    email, 
+    password, 
+    confirmPassword].some(element => element === "");
+
   try {
-    if (name === "" || password === "" || email === "") {
+    if (isEmpty) {
       return res.render("signup", {
         message: "Todos los campos son requeridos."
       });
@@ -55,13 +62,15 @@ router.post("/patient", async (req, res, next) => {
   const password = req.body.inputPassword;
   const confirmPassword = req.body.inputConfirmPassword;
 
+  const isEmpty = [
+    name, 
+    paternalLastName, 
+    email, 
+    password, 
+    confirmPassword].some(element => element === "");
+
   try {
-    if (
-      name === "" ||
-      paternalLastName === "" ||
-      password === "" ||
-      email === ""
-    ) {
+    if (isEmpty) {
       return res.render("signup", {
         message: "Todos los campos son requeridos."
       });
