@@ -16,12 +16,9 @@ router.post("/doctor", async (req, res, next) => {
   const password = req.body.inputPassword;
   const confirmPassword = req.body.inputConfirmPassword;
 
-  const isEmpty = [
-    name, 
-    idCard, 
-    email, 
-    password, 
-    confirmPassword].some(element => element === "");
+  const isEmpty = [name, idCard, email, password, confirmPassword].some(
+    element => element === ""
+  );
 
   try {
     if (isEmpty) {
@@ -63,11 +60,12 @@ router.post("/patient", async (req, res, next) => {
   const confirmPassword = req.body.inputConfirmPassword;
 
   const isEmpty = [
-    name, 
-    paternalLastName, 
-    email, 
-    password, 
-    confirmPassword].some(element => element === "");
+    name,
+    paternalLastName,
+    email,
+    password,
+    confirmPassword
+  ].some(element => element === "");
 
   try {
     if (isEmpty) {
@@ -77,7 +75,7 @@ router.post("/patient", async (req, res, next) => {
     }
 
     const emailExists = await Patient.findOne({ email });
-    console.log(emailExists);
+
     if (emailExists) {
       return res.render("index", {
         message: "Este usuario ya existe."
@@ -99,7 +97,7 @@ router.post("/patient", async (req, res, next) => {
 
       req.session.currretUser = user;
 
-      res.redirect("profile");
+      res.redirect("/profile");
     } else {
       return res.render("signup", { message: "Las contraseñas no coinciden" });
     }
