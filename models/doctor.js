@@ -9,7 +9,7 @@ const doctorSchema = new Schema({
     specialty: {type: String},
     email: {type: String, match: /[\w\.-]+@[\w\.-]+\.[\w\.]+/, required: true},
     password: {type: String, required: true},
-    location: [{type: Schema.Types.ObjectId, ref: 'Location'}],
+    location: [{type: String}],
     appointment: [{type: Schema.Types.ObjectId, ref: 'Appointment'}]
 
 }, {
