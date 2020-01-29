@@ -71,35 +71,38 @@ router.post("/patient", async (req, res, next) => {
 
   try {
     if (isEmpty) {
-      console.log(`some fields are empty`);
       return res.render("signup", {
         message: "Todos los campos son requeridos."
       });
     }
 
     const emailExists = await Patient.findOne({ email });
-
+    console.log(emailExists);
     if (emailExists) {
-      return res.render("signup", {
+      return res.render("index", {
         message: "Este usuario ya existe."
       });
     }
 
-    if (password !== confirmPassword) {
+    if (password === confirmPassword) {
+      const salt = await bcrypt.genSalt(10);
+      const hashPass = await bcrypt.hash(password, salt);
+
+      await Patient.create({
+        name,
+        paternalLastName,
+        password: hashPass,
+        email
+      });
+
+      const user = await Patient.findOne({ email });
+
+      req.session.currretUser = user;
+
+      res.redirect("profile");
+    } else {
       return res.render("signup", { message: "Las contraseñas no coinciden" });
     }
-
-    const salt = await bcrypt.genSalt(10);
-    const hashPass = await bcrypt.hash(password, salt);
-
-    await Patient.create({ name, paternalLastName, password: hashPass, email });
-
-    const user = await Patient.findOne({ email });
-
-    req.session.currretUser = user;
-
-    console.log(user);
-    res.render("profile", { user });
   } catch (err) {
     console.log(err);
   }
