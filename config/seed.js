@@ -1,6 +1,6 @@
 require("dotenv").config();
-const mongoose = require('mongoose');
-const Patient = require('../models/patient');
+const mongoose = require("mongoose");
+const Patient = require("../models/Patient");
 
 mongoose.connect(process.env.URL_DB);
 Patient.collection.drop();
@@ -15,17 +15,17 @@ const patients = [
     name: "Diana",
     paternalLastName: "García",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "Andrea",
     paternalLastName: "López",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "Ana",
     paternalLastName: "Martínez",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "María",
     paternalLastName: "Rodríguez",
@@ -40,17 +40,17 @@ const patients = [
     name: "Daniela",
     paternalLastName: "Pérez",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "Alejandra",
     paternalLastName: "Sánchez",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "Adriana",
     paternalLastName: "Gómez",
     email: "hello@example.com"
-  },  
+  },
   {
     name: "Karla",
     paternalLastName: "Flores",
@@ -59,8 +59,8 @@ const patients = [
 ];
 
 Patient.create(patients)
-    .then(newPatients => {
-        console.log(`Created ${newPatients.length} patients`);
-        mongoose.connection.close();
-    })
-    .catch( err => console.log('error ', err));
+  .then(newPatients => {
+    console.log(`Created ${newPatients.length} patients`);
+    mongoose.connection.close();
+  })
+  .catch(err => console.log("error ", err));
