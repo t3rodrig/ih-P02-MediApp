@@ -5,7 +5,7 @@ const doctorSchema = new Schema({
     name: {type: String, required: true},
     paternalLastName: {type: String, required: true},
     maternalLastName: {type: String},
-    cedula: {type: String, required: true},
+    idCard: {type: String, required: false},
     specialty: {type: String},
     email: {type: String, match: /[\w\.-]+@[\w\.-]+\.[\w\.]+/, required: true},
     password: {type: String, required: true},
