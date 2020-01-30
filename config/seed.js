@@ -1,62 +1,77 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 const Patient = require("../models/Patient");
 
 mongoose.connect(process.env.URL_DB);
-Patient.collection.drop();
+
+const salt = bcrypt.genSaltSync(10);
+const hashPass = bcrypt.hashSync(process.env.DUMMY_PASS, salt);
 
 const patients = [
   {
     name: "Fernanda",
     paternalLastName: "Hernández",
-    email: "hello@example.com"
+    email: "fernanda@example.com",
+    password: hashPass
   },
   {
     name: "Diana",
     paternalLastName: "García",
-    email: "hello@example.com"
+    email: "diana@example.com",
+    password: hashPass
   },
   {
     name: "Andrea",
     paternalLastName: "López",
-    email: "hello@example.com"
+    email: "andrea@example.com",
+    password: hashPass
   },
   {
     name: "Ana",
     paternalLastName: "Martínez",
-    email: "hello@example.com"
+    email: "ana@example.com",
+    password: hashPass
   },
   {
     name: "María",
     paternalLastName: "Rodríguez",
-    email: "hello@example.com"
+    email: "maria@example.com",
+    password: hashPass
   },
   {
     name: "Mariana",
     paternalLastName: "González",
-    email: "hello@example.com"
+    email: "mariana@example.com",
+    password: hashPass
   },
   {
     name: "Daniela",
     paternalLastName: "Pérez",
-    email: "hello@example.com"
+    email: "daniela@example.com",
+    password: hashPass
   },
   {
     name: "Alejandra",
     paternalLastName: "Sánchez",
-    email: "hello@example.com"
+    email: "alejandra@example.com",
+    password: hashPass
   },
   {
     name: "Adriana",
     paternalLastName: "Gómez",
-    email: "hello@example.com"
+    email: "adriana@example.com",
+    password: hashPass
   },
   {
     name: "Karla",
     paternalLastName: "Flores",
-    email: "hello@example.com"
+    email: "karla@example.com",
+    password: hashPass
   }
 ];
+
+Patient.collection.drop();
 
 Patient.create(patients)
   .then(newPatients => {
