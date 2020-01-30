@@ -83,7 +83,7 @@ router.post("/patient", async (req, res, next) => {
     const emailExists = await Patient.findOne({ email });
 
     if (emailExists) {
-      return res.render("index", {
+      return res.render("signup", {
         message: "Este usuario ya existe."
       });
     }
