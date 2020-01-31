@@ -2,12 +2,13 @@ body {
   background-color: #f7f7f2;
 }
 
-nav {
-  height: 7.5vh;
+.dropdown-menu {
+  left: -100%;
 }
 
-.navbar-nav {
-  width: 55%;
+.logo-nav {
+  height: 100%;
+  width: 100px;
 }
 
 .footer {
@@ -19,6 +20,30 @@ nav {
   background-size: cover;
   background-position: center;
   height: 85vh;
+}
+
+/* home page */
+
+/* .intro-app {
+  background-image: url("./images/bg-intro.png");
+  background-size: cover;
+  background-position: center;
+} */
+
+.title {
+  color: #9d3030;
+  font-size: "Open Sans";
+  font-size: 46px;
+}
+
+.benefits {
+  font-family: "Raleway";
+  font-size: 20px;
+}
+
+ul .li-benefits {
+  font-family: "Raleway";
+  font-size: 16px;
 }
 
 /* Sign up */
@@ -52,4 +77,13 @@ nav {
 
 .user-card ul li {
   margin: 10px 0;
+}
+
+/* Log In Form */
+
+.login-form {
+  background-image: url("./images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
 }
