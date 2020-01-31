@@ -53,16 +53,14 @@ router.post("/doctor", async (req, res, next) => {
       const salt = await bcrypt.genSalt(10);
       const hashPass = await bcrypt.hash(password, salt);
 
-      const user = await Doctor.create({
+      await Doctor.create({
         name,
         paternalLastName,
         password: hashPass, 
         email
       });
 
-      req.session.currretUser = user;
-
-      res.redirect("/profile");
+      res.redirect("/login");
     } else {
       return res.render("signup", {
         messageDoc: "Las contraseñas no coinciden"
@@ -114,11 +112,7 @@ router.post("/patient", async (req, res, next) => {
         email
       });
 
-      const user = await Patient.findOne({ email });
-
-      req.session.currretUser = user;
-
-      res.redirect("/profile");
+      res.redirect("/login");
     } else {
       return res.render("signup", {
         messagePat: "Las contraseñas no coinciden"
