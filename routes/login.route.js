@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 const Doctor = require("../models/Doctor");
 const Patient = require("../models/Patient");
 
@@ -19,26 +20,24 @@ router.post("/doctor", async (req, res, next) => {
       });
     }
 
-    // const doctor = await Doctor.findOne({ email });
-    // console.log(doctor);
+    const user = await Doctor.findOne({ email });
 
-    // if (!doctor || !patient) {
-    //   return res.render("login", {
-    //     message: "El usuario no existe."
-    //   });
-    // } else {
-    //   if (
-    //     bcrypt.compareSync(password, patient.password) ||
-    //     bcrypt.compareSync(password, doctor.password)
-    //   ) {
-    //     req.session.currentUser = user;
-    //     res.redirect("profile");
-    //   } else {
-    //     res.render("login", {
-    //       message: "Los campos no coinciden."
-    //     });
-    //   }
-    // }
+    if (!user) {
+      return res.render("login", {
+        messageDoc: "El usuario no existe."
+      });
+    } else {
+      if (
+        bcrypt.compareSync(password, user.password)
+      ) {
+        req.session.currentUser = user._id;
+        res.redirect("/profile");
+      } else {
+        res.render("login", {
+          messageDoc: "Los campos no coinciden."
+        });
+      }
+    }
   } catch (error) {
     console.log(error);
   }
@@ -56,26 +55,24 @@ router.post("/patient", async (req, res, next) => {
       });
     }
 
-    const patient = await Patient.findOne({ email });
-    console.log(patient);
+    const user = await Patient.findOne({ email });
 
-    // if (!doctor || !patient) {
-    //   return res.render("login", {
-    //     message: "El usuario no existe."
-    //   });
-    // } else {
-    //   if (
-    //     bcrypt.compareSync(password, patient.password) ||
-    //     bcrypt.compareSync(password, doctor.password)
-    //   ) {
-    //     req.session.currentUser = user;
-    //     res.redirect("profile");
-    //   } else {
-    //     res.render("login", {
-    //       message: "Los campos no coinciden."
-    //     });
-    //   }
-    // }
+    if (!user) {
+      return res.render("login", {
+        messagePat: "El usuario no existe."
+      });
+    } else {
+      if (
+        bcrypt.compareSync(password, user.password) 
+      ) {
+        req.session.currentUser = user._id;
+        res.redirect("/profile");
+      } else {
+        res.render("login", {
+          messagePat: "Los campos no coinciden."
+        });
+      }
+    }
   } catch (error) {
     console.log(error);
   }
