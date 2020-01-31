@@ -30,7 +30,7 @@ router.post("/doctor", async (req, res, next) => {
       if (
         bcrypt.compareSync(password, user.password)
       ) {
-        req.session.currentUser = user._id;
+        req.session.currentUser = user;
         res.redirect("/profile");
       } else {
         res.render("login", {
@@ -65,7 +65,7 @@ router.post("/patient", async (req, res, next) => {
       if (
         bcrypt.compareSync(password, user.password) 
       ) {
-        req.session.currentUser = user._id;
+        req.session.currentUser = user;
         res.redirect("/profile");
       } else {
         res.render("login", {
