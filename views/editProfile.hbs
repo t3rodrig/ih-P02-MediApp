@@ -6,7 +6,7 @@
 				<img class="rounded-circle" src="https://via.placeholder.com/100" alt="">
 			</div>
 			<div class="col-10">
-				<form action="/profile/edit" method="POST">
+				<form action="/profile/patient/edit?personId={{user._id}}" method="POST">
 					<div class="form-group">
 						<label for="name" class="text-dark">Nombre</label>
 						<input type="text" name='userName' class="form-control" name="name" aria-describedby="emailHelp"
