@@ -10,16 +10,16 @@
 						<div class="row">
 							<div class="col-12">
 								<h2>
-									Nombre Completo {{user.name}}
+									{{user.name}} {{user.paternalLastName}} {{user.maternalLastName}}
 								</h2>
 							</div>
 							<div class="col-12">
 								<h2>
-									Correo {{user.email}}
+									{{user.email}}
 								</h2>
 							</div>
 							<div class="col-12 d-flex justify-content-start align-items-center my-3">
-								<a href="profile/edit">
+								<a href="/profile/patient/edit?personId={{user._id}}">
 									<button type="submit" class="btn btn-dark">Editar</button>
 								</a>
 							</div>
