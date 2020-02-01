@@ -2,10 +2,10 @@
 <div class="row justify-content-center align-items-center">
 	<div class="col-10 my-5">
 		<div class="row">
-			<div class="col-2 d-flex justify-content-center align-items-start">
+			<div class="col-md-2 col-12 d-flex justify-content-center align-items-start">
 				<img class="rounded-circle" src="https://via.placeholder.com/100" alt="">
 			</div>
-			<div class="col-10">
+			<div class="col-md-10 col-12">
 				<form action="/profile/patient/edit?personId={{user._id}}" method="POST">
 					<div class="form-group">
 						<label for="name" class="text-dark texts font-weight-bold">Nombre</label>
@@ -23,9 +23,33 @@
 							value="{{user.maternalLastName}}" placeholder="{{user.maternalLastName}}">
 					</div>
 					<div class="form-group">
-						<label for="email" class="text-dark texts font-weight-bold">Email</label>
-						<input type="email" name='userEmail' class="form-control" name="email" aria-describedby="emailHelp"
-							value="{{user.email}}" placeholder="{{user.email}}">
+						<label for="age" class="text-dark texts font-weight-bold">Edad</label>
+						<input type="number" name='age' class="form-control" name="age" aria-describedby="emailHelp"
+							value="{{user.age}}" placeholder="{{user.age}}">
+					</div>
+					<div class="form-group">
+						<label for="weight" class="text-dark texts font-weight-bold">Peso</label>
+						<input type="number" name='weight' class="form-control" name="weight" aria-describedby="emailHelp"
+							value="{{user.weight}}" placeholder="{{user.weight}}">
+					</div>
+					<div class="form-group">
+						<label for="height" class="text-dark texts font-weight-bold">Altura</label>
+						<input type="number" name='userEmail' class="form-control" name="height" aria-describedby="emailHelp"
+							value="{{user.height}}" placeholder="{{user.height}}">
+					</div>
+					<div class="form-group">
+						<label for="blood_type" class="text-dark texts font-weight-bold">Tipo de Sangre</label>
+						<select class="form-control" id="blood_type" placeholder="Delegación">
+							<option class="texts" value=""></option>
+							<option class="texts" value="A+">A+</option>
+							<option class="texts" value="A-">A-</option>
+							<option class="texts" value="B+">B+</option>
+							<option class="texts" value="B-">B-</option>
+							<option class="texts" value="O+">O+</option>
+							<option class="texts" value="O-">O-</option>
+							<option class="texts" value="AB+">AB+</option>
+							<option class="texts" value="AB-">AB-</option>
+						</select>
 					</div>
 					<div class="form-group">
 						<label for="contraseña" class="text-dark texts font-weight-bold">Contraseña</label>

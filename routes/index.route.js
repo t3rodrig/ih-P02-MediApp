@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const Doctor = require("../models/Doctor");
-const FormData = require("form-data");
 const Patient = require("../models/Patient");
 
 router.get("/", async (req, res, next) => {
