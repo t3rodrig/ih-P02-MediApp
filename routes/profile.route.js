@@ -23,7 +23,7 @@ router.get("/doctor/:personId", async (req, res, next) => {
   if (!user) {
     return res.status(404).render("not-found");
   }
-  res.render("profile", { user });
+  res.render("profile-doctor", { user });
 });
 
 router.get("/patient/edit", (req, res, next) => {
@@ -31,34 +31,34 @@ router.get("/patient/edit", (req, res, next) => {
   res.render("editProfilePatient", { user });
 });
 
-router.post('/patient/edit', async (req, res, next) => {
+router.post("/patient/edit", async (req, res, next) => {
   const user = req.session.currentUser;
   const personId = user._id;
   const oldPass = req.body.contraseña;
   const newPass = req.body.newPassword;
   const confirmPass = req.body.confirmPassword;
 
-  if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)){
-  const data = { 
-    name,
-    paternalLastName,
-    maternalLastName,
-    email
-  } = req.body;
-  
-  if (newPass){
-    const salt = bcrypt.genSaltSync(10);
-    const hashPass = bcrypt.hashSync(newPass, salt);
-    data.password = hashPass;
-  }
+  if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
+    const data = ({
+      name,
+      paternalLastName,
+      maternalLastName,
+      email
+    } = req.body);
 
-  await Patient.findByIdAndUpdate(personId, {$set: data});
-  res.redirect(`/profile/patient/${personId}`);
+    if (newPass) {
+      const salt = bcrypt.genSaltSync(10);
+      const hashPass = bcrypt.hashSync(newPass, salt);
+      data.password = hashPass;
+    }
+
+    await Patient.findByIdAndUpdate(personId, { $set: data });
+    res.redirect(`/profile/patient/${personId}`);
   } else {
-  return res.render("editProfilePatient", {
-    user,
-    messagePat: "Las contraseñas no coinciden"
-  });
+    return res.render("editProfilePatient", {
+      user,
+      messagePat: "Las contraseñas no coinciden"
+    });
   }
 });
 
