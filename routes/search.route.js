@@ -9,7 +9,7 @@ router.get("/", (req, res, next) => {
   if (!user) {
     res.render("search");
   }
-  res.render("search", user);
+  res.render("search", { user });
 });
 
 module.exports = router;

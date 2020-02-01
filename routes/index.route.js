@@ -11,7 +11,7 @@ router.get("/", (req, res, next) => {
     res.render("index");
   }
 
-  res.render("index", user);
+  res.render("index", { user });
 });
 
 router.get("/logout", (req, res, next) => {

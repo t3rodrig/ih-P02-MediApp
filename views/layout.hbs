@@ -38,7 +38,7 @@
 							Hola {{user.name}}
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="/profile">Perfil</a>
+							<a class="dropdown-item" href="/profile/{{user.role}}/{{user._id}}">Perfil</a>
 							<a class="dropdown-item" href="/logout">Salir</a>
 						</div>
 					{{else}}

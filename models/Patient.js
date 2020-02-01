@@ -15,6 +15,10 @@ const patientSchema = new Schema(
     appointment: [{ type: Schema.Types.ObjectId, ref: "Appointment" }],
     profilePic: {
       type: String
+    },
+    role: {
+      type: String,
+      default: "patient"
     }
   },
   {
