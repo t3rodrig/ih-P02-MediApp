@@ -1,17 +1,39 @@
 const express = require("express");
 const router = express.Router();
+const axios = require("axios");
 const Doctor = require("../models/Doctor");
+const FormData = require("form-data");
 const Patient = require("../models/Patient");
 
-router.get("/", (req, res, next) => {
+router.get("/", async (req, res, next) => {
   const user = req.session.currentUser;
-  console.log(user);
+
+  // try {
+  //   const data = new FormData();
+  //   data.append(
+  //     "json",
+  //     JSON.stringify({
+  //       maxResult: "1000",
+  //       nombre: "",
+  //       paterno: "",
+  //       materno: "",
+  //       idCedula: "8134801"
+  //     })
+  //   );
+  //   const iD = await axios.post(
+  //     "https://www.cedulaprofesional.sep.gob.mx/cedula/buscaCedulaJson.action",
+  //     data
+  //   );
+  //   console.log(iD);
+  // } catch (error) {
+  //   console.log(error);
+  // }
+
+  res.render("index", { user });
 
   if (!user) {
     res.render("index");
   }
-
-  res.render("index", { user });
 });
 
 router.get("/logout", (req, res, next) => {
