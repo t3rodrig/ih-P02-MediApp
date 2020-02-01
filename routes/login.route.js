@@ -28,7 +28,7 @@ router.post("/doctor", async (req, res, next) => {
     } else {
       if (bcrypt.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        res.redirect(`/profile/doctor/${user._id}`);
+        res.redirect(`/profile/doctor/${req.session.currentUser._id}`);
       } else {
         res.render("login", {
           messageDoc: "Los campos no coinciden."
@@ -61,7 +61,7 @@ router.post("/patient", async (req, res, next) => {
     } else {
       if (bcrypt.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        res.redirect(`/profile/patient/${user._id}`);
+        res.redirect(`/profile/patient/${req.session.currentUser._id}`);
       } else {
         res.render("login", {
           messagePat: "Los campos no coinciden."

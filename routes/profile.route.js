@@ -13,23 +13,39 @@ router.use((req, res, next) => {
   }
 });
 
-router.get("/doctor/:personId", async (req, res, next) => {
-  let personId = req.params.personId;
-  if (!/^[0-9a-fA-F]{24}$/.test(personId)) {
-    return res.status(404).render("not-found");
-  }
+router.get("/patient/:patientID", async (req, res, next) => {
+  const patient = req.session.currentUser;
 
-  const user = await Doctor.findById(personId);
+  const user = await Patient.findById(patient._id);
+  if (!user) {
+    return res.render("index");
+  }
+  res.render("profile-patient", { user });
+});
+
+router.get("/doctor/:doctorID", async (req, res, next) => {
+  const doctor = req.session.currentUser;
+
+  const user = await Doctor.findById(doctor._id);
   if (!user) {
     return res.status(404).render("not-found");
   }
   res.render("profile-doctor", { user });
 });
 
+// Get edit profile layout
+
 router.get("/patient/edit", (req, res, next) => {
   const user = req.session.currentUser;
   res.render("editProfilePatient", { user });
 });
+
+router.get("/doctor/edit", (req, res, next) => {
+  const user = req.session.currentUser;
+  res.render("editProfileDoctor", { user });
+});
+
+// Post edit profile
 
 router.post("/patient/edit", async (req, res, next) => {
   const user = req.session.currentUser;
@@ -53,26 +69,13 @@ router.post("/patient/edit", async (req, res, next) => {
     }
 
     await Patient.findByIdAndUpdate(personId, { $set: data });
-    res.redirect(`/profile/patient/${personId}`);
+    res.redirect("/profile/patient");
   } else {
     return res.render("editProfilePatient", {
       user,
       messagePat: "Las contraseñas no coinciden"
     });
   }
-});
-
-router.get("/patient/:personId", async (req, res, next) => {
-  let personId = req.params.personId;
-  if (!/^[0-9a-fA-F]{24}$/.test(personId)) {
-    return res.status(404).render("not-found");
-  }
-
-  const user = await Patient.findById(personId);
-  if (!user) {
-    return res.status(404).render("not-found");
-  }
-  res.render("profile-patient", { user });
 });
 
 module.exports = router;
