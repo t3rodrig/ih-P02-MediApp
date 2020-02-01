@@ -28,9 +28,9 @@ router.get("/", async (req, res, next) => {
   //   console.log(error);
   // }
 
-  res.render("index", { user });
-
-  if (!user) {
+  if (user) {
+    res.render("index", { user });
+  } else {
     res.render("index");
   }
 });
