@@ -2,36 +2,60 @@
 <div class="row justify-content-center align-items-center">
 	<div class="col-10 my-5">
 		<div class="row">
-			<div class="col-2 d-flex justify-content-center align-items-start">
+			<div class="col-md-2 col-12 d-flex justify-content-center align-items-start">
 				<img class="rounded-circle" src="https://via.placeholder.com/100" alt="">
 			</div>
-			<div class="col-10">
+			<div class="col-md-10 col-12">
 				<form action="/profile/patient/edit?personId={{user._id}}" method="POST">
 					<div class="form-group">
-						<label for="name" class="text-dark texts font-weight-bold">Nombre</label>
-						<input type="text" name='userName' class="form-control" name="name" aria-describedby="emailHelp"
+						<label for="userName" class="text-dark texts font-weight-bold">Nombre</label>
+						<input type="text" name='userName' id="userName" class="form-control" aria-describedby="emailHelp"
 							value="{{user.name}}" placeholder="{{user.name}}">
 					</div>
 					<div class="form-group">
 						<label for="paternalLastName" class="text-dark texts font-weight-bold">Apellido Paterno</label>
-						<input type="text" name='userName' class="form-control" name="paternalLastName" aria-describedby="emailHelp"
+						<input type="text" name="paternalLastName" id="paternalLastName" class="form-control" aria-describedby="emailHelp"
 							value="{{user.paternalLastName}}" placeholder="{{user.paternalLastName}}">
 					</div>
 					<div class="form-group">
 						<label for="maternalLastName" class="text-dark texts font-weight-bold">Apellido Materno</label>
-						<input type="text" name='userName' class="form-control" name="maternalLastName" aria-describedby="emailHelp"
+						<input type="text" name="maternalLastName" id="maternalLastName" class="form-control" aria-describedby="emailHelp"
 							value="{{user.maternalLastName}}" placeholder="{{user.maternalLastName}}">
 					</div>
 					<div class="form-group">
-						<label for="email" class="text-dark texts font-weight-bold">Email</label>
-						<input type="email" name='userEmail' class="form-control" name="email" aria-describedby="emailHelp"
-							value="{{user.email}}" placeholder="{{user.email}}">
+						<label for="age" class="text-dark texts font-weight-bold">Edad</label>
+						<input type="number" name="age" id="age" class="form-control" aria-describedby="emailHelp"
+							value="{{user.age}}" placeholder="{{user.age}}">
+					</div>
+					<div class="form-group">
+						<label for="weight" class="text-dark texts font-weight-bold">Peso</label>
+						<input type="number" name='weight' id='weight' class="form-control" aria-describedby="emailHelp"
+							value="{{user.weight}}" placeholder="{{user.weight}}">
+					</div>
+					<div class="form-group">
+						<label for="height" class="text-dark texts font-weight-bold">Altura</label>
+						<input type="number" name='height' id='height' class="form-control" aria-describedby="emailHelp"
+							value="{{user.height}}" placeholder="{{user.height}}">
+					</div>
+					<div class="form-group">
+						<label for="blood_type" class="text-dark texts font-weight-bold">Tipo de Sangre</label>
+						<select class="form-control" id="blood_type">
+							<option class="texts" value=""></option>
+							<option class="texts" value="A+">A+</option>
+							<option class="texts" value="A-">A-</option>
+							<option class="texts" value="B+">B+</option>
+							<option class="texts" value="B-">B-</option>
+							<option class="texts" value="O+">O+</option>
+							<option class="texts" value="O-">O-</option>
+							<option class="texts" value="AB+">AB+</option>
+							<option class="texts" value="AB-">AB-</option>
+						</select>
 					</div>
 					<div class="form-group">
 						<label for="contraseña" class="text-dark texts font-weight-bold">Contraseña</label>
-						<input type="password" name='contraseña' class="form-control mb-3"  placeholder="Contraseña">
-						<input type="password" name='newPassword' class="form-control my-3"  placeholder="Nueva Contraseña">
-						<input type="password" name='confirmPassword' class="form-control my-3" 
+						<input type="password" name='contraseña' id='contraseña' class="form-control mb-3"  placeholder="Contraseña">
+						<input type="password" name='newPassword' id='newPassword' class="form-control my-3"  placeholder="Nueva Contraseña">
+						<input type="password" name='confirmPassword' id='confirmPassword' class="form-control my-3" 
 							placeholder="Confirmar Contraseña">
 						{{#if messagePassword}}
 						<div class="error-message">{{ messagePassword }}</div>
