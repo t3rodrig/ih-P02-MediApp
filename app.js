@@ -47,6 +47,9 @@ app.use("/signup", signup);
 const profile = require("./routes/profile.route");
 app.use("/profile", profile);
 
+const search = require("./routes/search.route");
+app.use("/search", search);
+
 // app.all("*", (req, res, next) => {
 //   res.render("/");
 // });

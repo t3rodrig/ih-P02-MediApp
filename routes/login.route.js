@@ -10,7 +10,6 @@ router.get("/", (req, res, next) => {
 
 router.post("/doctor", async (req, res, next) => {
   try {
-
     const email = req.body.inputEmail;
     const password = req.body.inputPassword;
 
@@ -27,9 +26,7 @@ router.post("/doctor", async (req, res, next) => {
         messageDoc: "El usuario no existe."
       });
     } else {
-      if (
-        bcrypt.compareSync(password, user.password)
-      ) {
+      if (bcrypt.compareSync(password, user.password)) {
         req.session.currentUser = user;
         res.redirect(`/profile/doctor/${user._id}`);
       } else {
@@ -62,9 +59,7 @@ router.post("/patient", async (req, res, next) => {
         messagePat: "El usuario no existe."
       });
     } else {
-      if (
-        bcrypt.compareSync(password, user.password) 
-      ) {
+      if (bcrypt.compareSync(password, user.password)) {
         req.session.currentUser = user;
         res.redirect(`/profile/patient/${user._id}`);
       } else {

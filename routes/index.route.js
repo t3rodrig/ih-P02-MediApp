@@ -4,13 +4,14 @@ const Doctor = require("../models/Doctor");
 const Patient = require("../models/Patient");
 
 router.get("/", (req, res, next) => {
-  // const user = req.session.currentUser;
+  const user = req.session.currentUser;
+  console.log(user);
 
-  // if (user) {
-  //   res.render("index", user);
-  // }
+  if (!user) {
+    res.render("index");
+  }
 
-  res.render("index");
+  res.render("index", user);
 });
 
 router.get("/logout", (req, res, next) => {

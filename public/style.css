@@ -15,6 +15,21 @@ body {
   height: 10vh !important;
 }
 
+.titles {
+  color: #9d3030;
+  font-size: "Open Sans";
+  font-weight: 700;
+}
+
+.texts {
+  font-family: "Raleway";
+  color: #000000;
+}
+
+.btn-mpk {
+  background-color: #9d3030;
+}
+
 /* home page */
 
 .index {
@@ -25,8 +40,6 @@ body {
 }
 
 .main-title {
-  color: #9d3030;
-  font-size: "Open Sans";
   font-size: 52px;
 }
 
@@ -39,19 +52,15 @@ body {
   border: none;
 }
 
-.title {
-  color: #9d3030;
-  font-size: "Open Sans";
+.intro-title {
   font-size: 46px;
 }
 
 .benefits {
-  font-family: "Raleway";
   font-size: 20px;
 }
 
 ul .li-benefits {
-  font-family: "Raleway";
   font-size: 16px;
 }
 
@@ -76,14 +85,6 @@ ul .li-benefits {
   transform: scale(1.05);
 }
 
-.user-card h2 {
-  font-family: "Open Sans", sans-serif;
-}
-
-.user-card ul {
-  font-family: "Raleway", sans-serif;
-}
-
 .user-card ul li {
   margin: 10px 0;
 }
@@ -95,4 +96,27 @@ ul .li-benefits {
   background-size: cover;
   background-position: center;
   height: 85vh;
+}
+
+/* Advanced Search */
+
+.s-title {
+  color: #9d3030;
+  font-size: 32px;
+}
+
+.s-doctor {
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 25px;
+}
+
+/* Profile */
+
+.p-title {
+  font-size: 32px;
+}
+
+.border-boxes {
+  border: 3px solid #000000;
 }

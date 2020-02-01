@@ -29,21 +29,28 @@
           <a class="nav-link" href="/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Búsqueda avanzada</a>
+          <a class="nav-link" href="/search">Búsqueda avanzada</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-						Únete
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					{{#if user}}
-            <a class="dropdown-item" href="/logout">Log Out</a>
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+							Hola {{user.name}}
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/profile">Perfil</a>
+							<a class="dropdown-item" href="/logout">Salir</a>
+						</div>
 					{{else}}
-            <a class="dropdown-item" href="/login">Inicia sesión</a>
-            <a class="dropdown-item" href="/signup">Regístrate</a>
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+							Únete
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/login">Inicia sesión</a>
+            	<a class="dropdown-item" href="/signup">Regístrate</a>
+						</div>
 					{{/if}}
-          </div>
         </li>
       </ul>
     </div>
