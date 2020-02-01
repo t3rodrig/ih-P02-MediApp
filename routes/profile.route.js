@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 // const uploadCloud = require("../config/cloudinary");
 const Doctor = require("../models/Doctor");
 const Patient = require("../models/Patient");
@@ -26,17 +27,39 @@ router.get("/doctor/:personId", async (req, res, next) => {
 });
 
 router.get("/patient/edit", (req, res, next) => {
-  let personId = req.query.personId;
-  if (!/^[0-9a-fA-F]{24}$/.test(personId)) {
-    return res.status(404).render("not-found");
-  }
-
   const user = req.session.currentUser;
-  if (personId !== user._id) {
-    return res.status(404).render("not-found");
+  res.render("editProfilePatient", { user });
+});
+
+router.post('/patient/edit', async (req, res, next) => {
+  const user = req.session.currentUser;
+  const personId = user._id;
+  const oldPass = req.body.contraseña;
+  const newPass = req.body.newPassword;
+  const confirmPass = req.body.confirmPassword;
+
+  if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)){
+  const data = { 
+    name,
+    paternalLastName,
+    maternalLastName,
+    email
+  } = req.body;
+  
+  if (newPass){
+    const salt = bcrypt.genSaltSync(10);
+    const hashPass = bcrypt.hashSync(newPass, salt);
+    data.password = hashPass;
   }
 
-  res.render("editProfile", { user });
+  await Patient.findByIdAndUpdate(personId, {$set: data});
+  res.redirect(`/profile/patient/${personId}`);
+  } else {
+  return res.render("editProfilePatient", {
+    user,
+    messagePat: "Las contraseñas no coinciden"
+  });
+  }
 });
 
 router.get("/patient/:personId", async (req, res, next) => {
@@ -49,7 +72,7 @@ router.get("/patient/:personId", async (req, res, next) => {
   if (!user) {
     return res.status(404).render("not-found");
   }
-  res.render("profile", { user });
+  res.render("profile-patient", { user });
 });
 
 module.exports = router;

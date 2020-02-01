@@ -2,12 +2,10 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const Doctor = require("../models/Doctor");
-const FormData = require("form-data");
 const Patient = require("../models/Patient");
 
 router.get("/", async (req, res, next) => {
   const user = req.session.currentUser;
-
   // try {
   //   const data = new FormData();
   //   data.append(
@@ -29,9 +27,9 @@ router.get("/", async (req, res, next) => {
   //   console.log(error);
   // }
 
-  res.render("index", { user });
-
-  if (!user) {
+  if (user) {
+    res.render("index", { user });
+  } else {
     res.render("index");
   }
 });
