@@ -30,6 +30,14 @@ body {
   background-color: #9d3030;
 }
 
+.bg-404 {
+  background-image: url("./images/bg-404.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+}
+
 /* home page */
 
 .index {
