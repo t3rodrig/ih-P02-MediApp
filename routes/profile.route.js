@@ -13,6 +13,20 @@ router.use((req, res, next) => {
   }
 });
 
+// Get edit profile layout
+
+router.get("/patient/edit", (req, res, next) => {
+  const user = req.session.currentUser;
+  res.render("editProfilePatient", { user });
+});
+
+router.get("/doctor/edit", (req, res, next) => {
+  const user = req.session.currentUser;
+  res.render("editProfileDoctor", { user });
+});
+
+// Get profile layout
+
 router.get("/patient/:patientID", async (req, res, next) => {
   const patient = req.session.currentUser;
 
@@ -31,18 +45,6 @@ router.get("/doctor/:doctorID", async (req, res, next) => {
     return res.status(404).render("not-found");
   }
   res.render("profile-doctor", { user });
-});
-
-// Get edit profile layout
-
-router.get("/patient/edit", (req, res, next) => {
-  const user = req.session.currentUser;
-  res.render("editProfilePatient", { user });
-});
-
-router.get("/doctor/edit", (req, res, next) => {
-  const user = req.session.currentUser;
-  res.render("editProfileDoctor", { user });
 });
 
 // Post edit profile
