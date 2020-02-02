@@ -34,6 +34,10 @@ router.get("/patient/:patientID", async (req, res, next) => {
   if (!user) {
     return res.render("index");
   }
+  if (user.birthdate){
+    // user.birthdate = user.birthdate.toDateString();
+    console.log(typeof user.birthdate, user.birthdate.toDateString());
+  }
   res.render("profile-patient", { user });
 });
 
@@ -52,7 +56,7 @@ router.get("/doctor/:doctorID", async (req, res, next) => {
 router.post("/patient/edit", async (req, res, next) => {
   const user = req.session.currentUser;
   const personId = user._id;
-  const oldPass = req.body.contraseña;
+  const oldPass = req.body.oldPassword;
   const newPass = req.body.newPassword;
   const confirmPass = req.body.confirmPassword;
 
@@ -61,7 +65,10 @@ router.post("/patient/edit", async (req, res, next) => {
       name,
       paternalLastName,
       maternalLastName,
-      email
+      birthdate,
+      weight,
+      height,
+      bloodType
     } = req.body);
 
     if (newPass) {
@@ -71,7 +78,7 @@ router.post("/patient/edit", async (req, res, next) => {
     }
 
     await Patient.findByIdAndUpdate(personId, { $set: data });
-    res.redirect("/profile/patient");
+    res.redirect(`/profile/patient/${personId}`);
   } else {
     return res.render("editProfilePatient", {
       user,
