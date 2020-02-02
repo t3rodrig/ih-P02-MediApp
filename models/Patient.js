@@ -11,14 +11,22 @@ const patientSchema = new Schema(
       match: /[\w\.-]+@[\w\.-]+\.[\w\.]+/,
       required: true
     },
-    password: { type: String, required: true },
+    password: {
+      type: String,
+      minlength: 4,
+      maxlength: 12,
+      required: true
+    },
     profilePic: {
       type: String
     },
-    age: Number,
-    blood_type: String,
-    height: Number,
-    weight: Number,
+    birthdate: {type: Date},
+    bloodType: {
+      type: String,
+      enum: ['O-', 'O+', 'A-', 'A+', 'B-', 'B+', 'AB-', 'AB+']
+    },
+    height: {type: Number, min: 0, max: 2}, // meters
+    weight: {type: Number, min: 0, max: 200}, // kilograms
     appointment: [{ type: Schema.Types.ObjectId, ref: "Appointment" }],
     role: {
       type: String,
