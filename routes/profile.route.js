@@ -17,6 +17,7 @@ router.use((req, res, next) => {
 
 router.get("/patient/edit", (req, res, next) => {
   const user = req.session.currentUser;
+  user.birthdate = user.birthdate.slice(0,10);
   res.render("editProfilePatient", { user });
 });
 
@@ -35,8 +36,9 @@ router.get("/patient/:patientID", async (req, res, next) => {
     return res.render("index");
   }
   if (user.birthdate){
-    // user.birthdate = user.birthdate.toDateString();
-    console.log(typeof user.birthdate, user.birthdate.toDateString());
+    let currentYear = (new Date()).getFullYear();
+    let birthYear = user.birthdate.getFullYear();
+    user.age = currentYear - birthYear;
   }
   res.render("profile-patient", { user });
 });
@@ -59,17 +61,21 @@ router.post("/patient/edit", async (req, res, next) => {
   const oldPass = req.body.oldPassword;
   const newPass = req.body.newPassword;
   const confirmPass = req.body.confirmPassword;
+  const data = {};
+  const fields = [
+    "name",
+    "paternalLastName",
+    "maternalLastName",
+    "birthdate",
+    "weight",
+    "height",
+    "bloodType"
+  ];
 
   if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
-    const data = ({
-      name,
-      paternalLastName,
-      maternalLastName,
-      birthdate,
-      weight,
-      height,
-      bloodType
-    } = req.body);
+    for (let item of fields) {
+      data[item] = req.body[item];
+    }
 
     if (newPass) {
       const salt = bcrypt.genSaltSync(10);
@@ -77,7 +83,11 @@ router.post("/patient/edit", async (req, res, next) => {
       data.password = hashPass;
     }
 
-    await Patient.findByIdAndUpdate(personId, { $set: data });
+    req.session.currentUser = await Patient.findByIdAndUpdate(
+      personId, 
+      { $set: data }, 
+      { new: true }
+      );
     res.redirect(`/profile/patient/${personId}`);
   } else {
     return res.render("editProfilePatient", {
@@ -85,6 +95,10 @@ router.post("/patient/edit", async (req, res, next) => {
       messagePat: "Las contraseñas no coinciden"
     });
   }
+});
+
+router.all("*", (req, res, next) => {
+  res.status(404).render("not-found");
 });
 
 module.exports = router;
