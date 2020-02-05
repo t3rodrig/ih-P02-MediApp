@@ -17,7 +17,7 @@ router.use((req, res, next) => {
 
 router.get("/patient/edit", (req, res, next) => {
   const user = req.session.currentUser;
-  user.birthdate = user.birthdate.slice(0,10);
+  user.birthdate = user.birthdate.slice(0, 10);
   res.render("editProfilePatient", { user });
 });
 
@@ -35,8 +35,8 @@ router.get("/patient/:patientID", async (req, res, next) => {
   if (!user) {
     return res.render("index");
   }
-  if (user.birthdate){
-    let currentYear = (new Date()).getFullYear();
+  if (user.birthdate) {
+    let currentYear = new Date().getFullYear();
     let birthYear = user.birthdate.getFullYear();
     user.age = currentYear - birthYear;
   }
@@ -84,10 +84,10 @@ router.post("/patient/edit", async (req, res, next) => {
     }
 
     req.session.currentUser = await Patient.findByIdAndUpdate(
-      personId, 
-      { $set: data }, 
+      personId,
+      { $set: data },
       { new: true }
-      );
+    );
     res.redirect(`/profile/patient/${personId}`);
   } else {
     return res.render("editProfilePatient", {
