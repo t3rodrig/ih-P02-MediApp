@@ -17,7 +17,10 @@ router.use((req, res, next) => {
 
 router.get("/patient/edit", (req, res, next) => {
   const user = req.session.currentUser;
-  user.birthdate = user.birthdate.slice(0, 10);
+
+  if (user.birthdate) {
+    user.birthdate = user.birthdate.slice(0, 10);
+  }
   res.render("editProfilePatient", { user });
 });
 
