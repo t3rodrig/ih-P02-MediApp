@@ -38,10 +38,10 @@ router.get("/patient/:patientID", async (req, res, next) => {
   if (!user) {
     return res.render("index");
   }
-  if (user.birthdate) {
-    let currentYear = new Date().getFullYear();
-    let birthYear = user.birthdate.getFullYear();
-    user.age = currentYear - birthYear;
+  if (user.birthdate){
+    let currentDate = new Date();
+    let birthdate = user.birthdate;
+    user.age = Math.floor((currentDate - birthdate) / 31536000000);
   }
   res.render("profile-patient", { user });
 });
