@@ -58,20 +58,20 @@
       </div>
       <div class="modal-body">
         <form action="/login/doctor" method="POST">
-			<div class="form-group">
-				<label for="inputEmail">Correo Electrónico</label>
-				<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
-			</div>
-			<div class="form-group">
-				<label for="inputPassword">Contraseña</label>
-				<input type="password" class="form-control" name="inputPassword">
-			</div>
-			{{#if messageDoc}}
-			<div class="error-message">{{ messageDoc }}</div>
-			<script> $('#doctorModal').modal('show'); </script>			
-			{{/if}}
-			<button type="submit" class="btn btn-primary">Inicia sesión</button>
-		</form>
+					<div class="form-group">
+						<label for="inputEmail">Correo Electrónico</label>
+						<input type="email" class="form-control" name="inputEmail" aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="inputPassword">Contraseña</label>
+						<input type="password" class="form-control" name="inputPassword">
+					</div>
+					{{#if messageDoc}}
+					<div class="error-message">{{ messageDoc }}</div>
+					<script> $('#doctorModal').modal('show'); </script>			
+					{{/if}}
+					<button type="submit" class="btn btn-primary">Inicia sesión</button>
+				</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
