@@ -100,6 +100,47 @@ router.post("/patient/edit", async (req, res, next) => {
   }
 });
 
+router.post("/doctor/edit", async (req, res, next) => {
+  const user = req.session.currentUser;
+  const personId = user._id;
+  const oldPass = req.body.oldPassword;
+  const newPass = req.body.newPassword;
+  const confirmPass = req.body.confirmPassword;
+  const data = {};
+  const fields = [
+    "name",
+    "paternalLastName",
+    "maternalLastName",
+    "idCard",
+    "specialty",
+    "location"
+  ];
+
+  if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
+    for (let item of fields) {
+      data[item] = req.body[item];
+    }
+
+    if (newPass) {
+      const salt = bcrypt.genSaltSync(10);
+      const hashPass = bcrypt.hashSync(newPass, salt);
+      data.password = hashPass;
+    }
+
+    req.session.currentUser = await Doctor.findByIdAndUpdate(
+      personId,
+      { $set: data },
+      { new: true }
+    );
+    res.redirect(`/profile/doctor/${personId}`);
+  } else {
+    return res.render("editProfileDoctor", {
+      user,
+      messageDoc: "Las contraseñas no coinciden"
+    });
+  }
+});
+
 router.all("*", (req, res, next) => {
   res.status(404).render("not-found");
 });
