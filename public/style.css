@@ -137,3 +137,13 @@ ul .li-benefits {
 .border-boxes {
   border: 3px solid #000000;
 }
+
+.profile-pic {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
+
+#photo {
+  font-size: 10px;
+}

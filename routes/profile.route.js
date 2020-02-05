@@ -38,7 +38,7 @@ router.get("/patient/:patientID", async (req, res, next) => {
   if (!user) {
     return res.render("index");
   }
-  if (user.birthdate){
+  if (user.birthdate) {
     let currentDate = new Date();
     let birthdate = user.birthdate;
     user.age = Math.floor((currentDate - birthdate) / 31536000000);
