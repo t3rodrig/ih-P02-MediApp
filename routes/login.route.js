@@ -42,7 +42,6 @@ router.post("/doctor", async (req, res, next) => {
 
 router.post("/patient", async (req, res, next) => {
   try {
-    // res.redirect("/profile");
     const email = req.body.inputEmail;
     const password = req.body.inputPassword;
 
