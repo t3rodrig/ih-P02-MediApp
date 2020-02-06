@@ -14,7 +14,11 @@ const doctorSchema = new Schema(
       required: true
     },
     password: { type: String, required: true },
-    location: [{ type: String }],
+    address: {
+      streetAddress: { type: String },
+      borough: { type: String },
+      city: { type: String }
+    },
     appointment: [{ type: Schema.Types.ObjectId, ref: "Appointment" }],
     role: {
       type: String,
