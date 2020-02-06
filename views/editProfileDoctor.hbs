@@ -27,11 +27,7 @@
 						<input type="number" name="idCard" id="idCard" class="form-control" 
 							value="{{user.idCard}}" placeholder="{{user.idCard}}">
 					</div>
-					<div class="form-group">
-						<label for="specialty" class="text-dark texts font-weight-bold">Especialidad</label>
-						<input type="text" name='specialty' id='specialty' class="form-control" 
-							value="{{user.specialty}}" placeholder="{{user.specialty}}">
-					</div>
+					{{> doctorSpecialty}}
 					<div class="form-group">
 						<label for="location" class="text-dark texts font-weight-bold">Consultorio</label>
 						<input type="text" name='location' id='location' class="form-control" 
