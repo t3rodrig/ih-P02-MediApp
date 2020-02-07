@@ -5,11 +5,10 @@ const Patient = require("../models/Patient");
 
 router.get("/", async (req, res, next) => {
   const user = req.session.currentUser;
-  const search = req.query;
-  console.log(req.query);
+  const specialty = req.query.search_query;
 
   try {
-    await Doctor.find(search).then(doctors => {
+    await Doctor.find({"specialty": {$regex: new RegExp(specialty), $options: 'i'}}).then(doctors => {
       if (user) {
         res.render("search", { user, doctors });
       } else {
@@ -40,12 +39,10 @@ router.get("/advanced", async (req, res, next) => {
       };
 
       await Doctor.find(data).then(doctors => {
-      // await Doctor.find(data).then(doctors => {
-        console.log({doctors});
         if (user) {
           res.render("search-advanced", { user, doctors });
         } else {
-          res.render("search-advanced", doctors);
+          res.render("search-advanced", {doctors});
         }
       });
     } catch (error) {
