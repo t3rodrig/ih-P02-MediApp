@@ -45,7 +45,7 @@ router.get("/advanced", async (req, res, next) => {
         if (user) {
           res.render("search-advanced", { user, doctors });
         } else {
-          res.render("search-advanced", doctors);
+          res.render("search-advanced", {doctors});
         }
       });
     } catch (error) {
