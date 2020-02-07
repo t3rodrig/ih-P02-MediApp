@@ -1,4 +1,4 @@
-const cloudinary = require("cloudinary").v2;
+const cloudinary = require("cloudinary");
 const cloudinaryStorage = require("multer-storage-cloudinary");
 const multer = require("multer");
 const parser = multer({ storage: storage });
@@ -13,7 +13,10 @@ var storage = cloudinaryStorage({
   cloudinary,
   folder: "Medik+/profile",
   allowedFormats: ["jpg", "png"],
-  trasnformation: [{ width: 150, height: 150 }]
+  trasnformation: [{ width: 150, height: 150 }],
+  filename: function(req, file, cb) {
+    cb(null, file.originalname);
+  }
 });
 
 const uploadCloud = multer({ storage });

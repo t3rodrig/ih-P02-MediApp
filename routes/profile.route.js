@@ -58,50 +58,58 @@ router.get("/doctor/:doctorID", async (req, res, next) => {
 
 // Post edit profile
 
-router.post("/patient/edit", async (req, res, next) => {
-  const user = req.session.currentUser;
-  const personId = user._id;
-  const oldPass = req.body.oldPassword;
-  const newPass = req.body.newPassword;
-  const confirmPass = req.body.confirmPassword;
-  const data = {};
-  const fields = [
-    "name",
-    "paternalLastName",
-    "maternalLastName",
-    "birthdate",
-    "weight",
-    "height",
-    "bloodType"
-  ];
+router.post(
+  "/patient/edit",
+  uploadCloud.single("photo"),
+  async (req, res, next) => {
+    const user = req.session.currentUser;
+    const personId = user._id;
+    const oldPass = req.body.oldPassword;
+    const newPass = req.body.newPassword;
+    const confirmPass = req.body.confirmPassword;
+    let imgPath;
+    if (req.file) {
+      imgPath = req.file.url;
+    }
+    const data = {};
+    const fields = [
+      "name",
+      "paternalLastName",
+      "maternalLastName",
+      "birthdate",
+      "weight",
+      "height",
+      "bloodType"
+    ];
 
-  console.log(req.body);
-  res.redirect(`/profile/patient/${personId}`);
+    if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
+      for (let item of fields) {
+        data[item] = req.body[item];
+      }
+      if (imgPath) {
+        data.profilePic = imgPath;
+      }
 
-  // if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
-  //   for (let item of fields) {
-  //     data[item] = req.body[item];
-  //   }
+      if (newPass) {
+        const salt = bcrypt.genSaltSync(10);
+        const hashPass = bcrypt.hashSync(newPass, salt);
+        data.password = hashPass;
+      }
 
-  //   if (newPass) {
-  //     const salt = bcrypt.genSaltSync(10);
-  //     const hashPass = bcrypt.hashSync(newPass, salt);
-  //     data.password = hashPass;
-  //   }
-
-  //   req.session.currentUser = await Patient.findByIdAndUpdate(
-  //     personId,
-  //     { $set: data },
-  //     { new: true }
-  //   );
-  //   res.redirect(`/profile/patient/${personId}`);
-  // } else {
-  //   return res.render("editProfilePatient", {
-  //     user,
-  //     messagePat: "Las contraseñas no coinciden"
-  //   });
-  // }
-});
+      req.session.currentUser = await Patient.findByIdAndUpdate(
+        personId,
+        { $set: data },
+        { new: true }
+      );
+      res.redirect(`/profile/patient/${personId}`);
+    } else {
+      return res.render("editProfilePatient", {
+        user,
+        messagePat: "Las contraseñas no coinciden"
+      });
+    }
+  }
+);
 
 router.post("/doctor/edit", async (req, res, next) => {
   const user = req.session.currentUser;
