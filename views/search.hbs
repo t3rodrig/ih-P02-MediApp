@@ -7,56 +7,9 @@
 		</div>
 
 		<div class="row justify-content-around align-items-center my-5">
-			<div class="col-5 my-3 s-doctor p-3">
-				<a href="" class="d-flex flex-column card-link">
-					<h4 class="titles">Especialidad : Neurólogo</h4>
-					<p class="texts ml-2">Calle : </p>
-					<p class="texts ml-2">Colonia : </p>
-					<p class="texts ml-2">Delegación : </p>
-					<p class="texts ml-2">Médico : </p>
-					<p class="texts ml-2">Calificación : 4.5</p>
-				</a>
-			</div>
-			<div class="col-5 my-3 s-doctor p-3">
-				<a href="" class="d-flex flex-column card-link">
-					<h4 class="titles">Especialidad : Neurólogo</h4>
-					<p class="texts ml-2">Calle : </p>
-					<p class="texts ml-2">Colonia : </p>
-					<p class="texts ml-2">Delegación : </p>
-					<p class="texts ml-2">Médico : </p>
-					<p class="texts ml-2">Calificación : 4.5</p>
-				</a>
-			</div>
-			<div class="col-5 my-3 s-doctor p-3">
-				<a href="" class="d-flex flex-column card-link">
-					<h4 class="titles">Especialidad : Neurólogo</h4>
-					<p class="texts ml-2">Calle : </p>
-					<p class="texts ml-2">Colonia : </p>
-					<p class="texts ml-2">Delegación : </p>
-					<p class="texts ml-2">Médico : </p>
-					<p class="texts ml-2">Calificación : 4.5</p>
-				</a>
-			</div>
-			<div class="col-5 my-3 s-doctor p-3">
-				<a href="" class="d-flex flex-column card-link">
-					<h4 class="titles">Especialidad : Neurólogo</h4>
-					<p class="texts ml-2">Calle : </p>
-					<p class="texts ml-2">Colonia : </p>
-					<p class="texts ml-2">Delegación : </p>
-					<p class="texts ml-2">Médico : </p>
-					<p class="texts ml-2">Calificación : 4.5</p>
-				</a>
-			</div>
-			<div class="col-5 my-3 s-doctor p-3">
-				<a href="" class="d-flex flex-column card-link">
-					<h4 class="titles">Especialidad : Neurólogo</h4>
-					<p class="texts ml-2">Calle : </p>
-					<p class="texts ml-2">Colonia : </p>
-					<p class="texts ml-2">Delegación : </p>
-					<p class="texts ml-2">Médico : </p>
-					<p class="texts ml-2">Calificación : 4.5</p>
-				</a>
-			</div>
+			{{#each doctors}}
+   			{{> searchResultPartial}}
+  			{{/each}}
 		</div>
 	</div>
 </div>

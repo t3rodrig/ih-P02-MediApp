@@ -12,7 +12,7 @@ const doctors = [
   {
     "name": "Abril",
     "paternalLastName": "Garza",
-    "specialty": "Medicina forense",
+    "specialty": "Otorrinolaringología",
     "email": "abril@doctor.com",
     "password": hashPass,
     "address": {
@@ -24,7 +24,7 @@ const doctors = [
   {
     "name": "Ada",
     "paternalLastName": "Martinez",
-    "specialty": "Neumología",
+    "specialty": "Traumatología",
     "email": "ada@doctor.com",
     "password": hashPass,
     "address": {
@@ -36,7 +36,7 @@ const doctors = [
   {
     "name": "Adriana",
     "paternalLastName": "Lopez",
-    "specialty": "Nefrología",
+    "specialty": "Reumatología",
     "email": "adriana@doctor.com",
     "password": hashPass,
     "address": {
@@ -60,7 +60,7 @@ const doctors = [
   {
     "name": "Alexa",
     "paternalLastName": "Huerta",
-    "specialty": "Traumatología",
+    "specialty": "Dermatología",
     "email": "alexa@doctor.com",
     "password": hashPass,
     "address": {
@@ -71,32 +71,32 @@ const doctors = [
   },
   {
     "name": "Alondra",
-    "paternalLastName": "Contreras",
-    "specialty": "Oncología",
+    "paternalLastName": "Antonio",
+    "specialty": "Nefrología",
     "email": "alondra@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Benito Juárez",
+      "borough": "Coyoacán",
       "city": "CDMX"
     }
   },
   {
     "name": "Ana",
-    "paternalLastName": "Lopez",
-    "specialty": "Cardiología",
+    "paternalLastName": "Aguilar",
+    "specialty": "Traumatología",
     "email": "ana@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Álvaro Obregón",
+      "borough": "Miguel Hidalgo",
       "city": "CDMX"
     }
   },
   {
     "name": "Anahi",
-    "paternalLastName": "Lopez",
-    "specialty": "Hematología",
+    "paternalLastName": "Huerta",
+    "specialty": "Traumatología",
     "email": "anahi@doctor.com",
     "password": hashPass,
     "address": {
@@ -108,32 +108,20 @@ const doctors = [
   {
     "name": "Andrea",
     "paternalLastName": "Camargo",
-    "specialty": "Nutriología",
+    "specialty": "Geriatría",
     "email": "andrea@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Gustavo A. Madero",
+      "borough": "Magdalena Contreras",
       "city": "CDMX"
     }
   },
   {
     "name": "Arely",
-    "paternalLastName": "Jimenez",
-    "specialty": "Medicina interna",
+    "paternalLastName": "Cortes",
+    "specialty": "Oncología",
     "email": "arely@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Cuajimalpa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Barbara",
-    "paternalLastName": "Ornelas",
-    "specialty": "Neumología",
-    "email": "barbara@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -142,10 +130,10 @@ const doctors = [
     }
   },
   {
-    "name": "Berenice",
+    "name": "Barbara",
     "paternalLastName": "Martin",
-    "specialty": "Neurología",
-    "email": "berenice@doctor.com",
+    "specialty": "Urología",
+    "email": "barbara@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -154,10 +142,10 @@ const doctors = [
     }
   },
   {
-    "name": "Brenda",
+    "name": "Berenice",
     "paternalLastName": "Antonio",
-    "specialty": "Nefrología",
-    "email": "brenda@doctor.com",
+    "specialty": "Reumatología",
+    "email": "berenice@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -166,9 +154,21 @@ const doctors = [
     }
   },
   {
-    "name": "Camila",
+    "name": "Brenda",
     "paternalLastName": "Valenzuela",
-    "specialty": "Cardiología",
+    "specialty": "Dermatología",
+    "email": "brenda@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Venustiano Carranza",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Camila",
+    "paternalLastName": "Dominguez",
+    "specialty": "Alergología",
     "email": "camila@doctor.com",
     "password": hashPass,
     "address": {
@@ -179,21 +179,9 @@ const doctors = [
   },
   {
     "name": "Carolina",
-    "paternalLastName": "Dominguez",
-    "specialty": "Alergología",
-    "email": "carolina@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Cassandra",
     "paternalLastName": "Guzman",
-    "specialty": "Gastroenterología",
-    "email": "cassandra@doctor.com",
+    "specialty": "Geriatría",
+    "email": "carolina@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -202,10 +190,10 @@ const doctors = [
     }
   },
   {
-    "name": "Cecilia",
+    "name": "Cassandra",
     "paternalLastName": "Briseño",
-    "specialty": "Medicina familiar",
-    "email": "cecilia@doctor.com",
+    "specialty": "Neurología",
+    "email": "cassandra@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -214,106 +202,10 @@ const doctors = [
     }
   },
   {
-    "name": "Claudia",
+    "name": "Cecilia",
     "paternalLastName": "Torres",
-    "specialty": "Otorrinolaringología",
-    "email": "claudia@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Benito Juárez",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Dafne",
-    "paternalLastName": "Morales",
-    "specialty": "Traumatología",
-    "email": "dafne@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Miguel Hidalgo",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Daniela",
-    "paternalLastName": "Jimenez",
-    "specialty": "Gastroenterología",
-    "email": "daniela@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Coyoacán",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Daryna",
-    "paternalLastName": "Esparza",
     "specialty": "Cardiología",
-    "email": "daryna@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Azcapotzalco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Denisse",
-    "paternalLastName": "Aguilar",
-    "specialty": "Medicina intensiva",
-    "email": "denisse@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztapalapa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Diana",
-    "paternalLastName": "Hernandez",
-    "specialty": "Reumatología",
-    "email": "diana@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Álvaro Obregón",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Dulce",
-    "paternalLastName": "Dominguez",
-    "specialty": "Oncología",
-    "email": "dulce@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Coyoacán",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Elena",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Medicina familiar",
-    "email": "elena@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Coyoacán",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Elizabeth",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Reumatología",
-    "email": "elizabeth@doctor.com",
+    "email": "cecilia@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -322,178 +214,10 @@ const doctors = [
     }
   },
   {
-    "name": "Elyssa",
-    "paternalLastName": "Pichardo",
-    "specialty": "Medicina familiar",
-    "email": "elyssa@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Erika",
-    "paternalLastName": "Lopez",
-    "specialty": "Neumología",
-    "email": "erika@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Milpa Alta",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Esmeralda",
-    "paternalLastName": "Andrade",
-    "specialty": "Neurología",
-    "email": "esmeralda@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Azcapotzalco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Estefania",
-    "paternalLastName": "Martinez",
-    "specialty": "Hematología",
-    "email": "estefania@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tlalpan",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Evelyn",
-    "paternalLastName": "Cruz",
-    "specialty": "Oftalmología",
-    "email": "evelyn@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Magdalena Contreras",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Felicia",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Oftalmología",
-    "email": "felicia@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tláhuac",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Fernanda",
-    "paternalLastName": "Aguilar",
-    "specialty": "Toxicología",
-    "email": "fernanda@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztapalapa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Flor",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Medicina del deporte",
-    "email": "flor@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Xochimilco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Gabriela",
-    "paternalLastName": "Dominguez",
-    "specialty": "Dermatología",
-    "email": "gabriela@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Miguel Hidalgo",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Gloria",
-    "paternalLastName": "Briseño",
-    "specialty": "Urología",
-    "email": "gloria@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Magdalena Contreras",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Guadalupe",
-    "paternalLastName": "Hernandez",
-    "specialty": "Hematología",
-    "email": "guadalupe@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tlalpan",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Helena",
-    "paternalLastName": "Dominguez",
-    "specialty": "Traumatología",
-    "email": "helena@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Irma",
-    "paternalLastName": "Dominguez",
-    "specialty": "Angiología",
-    "email": "irma@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Isadora",
-    "paternalLastName": "Antonio",
-    "specialty": "Infectología",
-    "email": "isadora@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Coyoacán",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Itzel",
-    "paternalLastName": "Montiel",
-    "specialty": "Urología",
-    "email": "itzel@doctor.com",
+    "name": "Claudia",
+    "paternalLastName": "Lima",
+    "specialty": "Medicina interna",
+    "email": "claudia@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -502,10 +226,10 @@ const doctors = [
     }
   },
   {
-    "name": "Jazmin",
-    "paternalLastName": "Cortes",
-    "specialty": "Nutriología",
-    "email": "jazmin@doctor.com",
+    "name": "Dafne",
+    "paternalLastName": "Camargo",
+    "specialty": "Gastroenterología",
+    "email": "dafne@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -514,22 +238,22 @@ const doctors = [
     }
   },
   {
-    "name": "Jennifer",
-    "paternalLastName": "Huerta",
-    "specialty": "Medicina forense",
-    "email": "jennifer@doctor.com",
+    "name": "Daniela",
+    "paternalLastName": "Alvarez",
+    "specialty": "Alergología",
+    "email": "daniela@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Tlalpan",
+      "borough": "Xochimilco",
       "city": "CDMX"
     }
   },
   {
-    "name": "Jessica",
-    "paternalLastName": "Montiel",
-    "specialty": "Anestesiología",
-    "email": "jessica@doctor.com",
+    "name": "Daryna",
+    "paternalLastName": "Guzman",
+    "specialty": "Medicina familiar",
+    "email": "daryna@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -538,46 +262,58 @@ const doctors = [
     }
   },
   {
-    "name": "Julia",
-    "paternalLastName": "Espinosa",
+    "name": "Denisse",
+    "paternalLastName": "Dominguez",
+    "specialty": "Dermatología",
+    "email": "denisse@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Diana",
+    "paternalLastName": "Montiel",
+    "specialty": "Dermatología",
+    "email": "diana@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Dulce",
+    "paternalLastName": "Morales",
+    "specialty": "Oncología",
+    "email": "dulce@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tláhuac",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Elena",
+    "paternalLastName": "Sanchez",
+    "specialty": "Nefrología",
+    "email": "elena@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Milpa Alta",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Elizabeth",
+    "paternalLastName": "Andrade",
     "specialty": "Urología",
-    "email": "julia@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Milpa Alta",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Karen",
-    "paternalLastName": "Cruz",
-    "specialty": "Traumatología",
-    "email": "karen@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Cuauhtémoc",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Karina",
-    "paternalLastName": "Pichardo",
-    "specialty": "Medicina intensiva",
-    "email": "karina@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Milpa Alta",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Karla",
-    "paternalLastName": "Hernandez",
-    "specialty": "Oftalmología",
-    "email": "karla@doctor.com",
+    "email": "elizabeth@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -586,10 +322,34 @@ const doctors = [
     }
   },
   {
-    "name": "Katya",
-    "paternalLastName": "Ornelas",
-    "specialty": "Medicina intensiva",
-    "email": "katya@doctor.com",
+    "name": "Elyssa",
+    "paternalLastName": "Martinez",
+    "specialty": "Medicina interna",
+    "email": "elyssa@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tlalpan",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Erika",
+    "paternalLastName": "Cruz",
+    "specialty": "Medicina interna",
+    "email": "erika@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Esmeralda",
+    "paternalLastName": "Morales",
+    "specialty": "Alergología",
+    "email": "esmeralda@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -598,9 +358,249 @@ const doctors = [
     }
   },
   {
-    "name": "Kimberly",
+    "name": "Estefania",
+    "paternalLastName": "Valenzuela",
+    "specialty": "Neumología",
+    "email": "estefania@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Evelyn",
+    "paternalLastName": "Dominguez",
+    "specialty": "Endocrinología",
+    "email": "evelyn@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Miguel Hidalgo",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Felicia",
+    "paternalLastName": "Briseño",
+    "specialty": "Medicina interna",
+    "email": "felicia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Iztapalapa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Fernanda",
+    "paternalLastName": "Jimenez",
+    "specialty": "Oncología",
+    "email": "fernanda@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Flor",
+    "paternalLastName": "Sanchez",
+    "specialty": "Traumatología",
+    "email": "flor@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Gabriela",
+    "paternalLastName": "Briseño",
+    "specialty": "Otorrinolaringología",
+    "email": "gabriela@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Benito Juárez",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Gloria",
+    "paternalLastName": "Lopez",
+    "specialty": "Dermatología",
+    "email": "gloria@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tláhuac",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Guadalupe",
+    "paternalLastName": "Espinosa",
+    "specialty": "Urología",
+    "email": "guadalupe@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuajimalpa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Helena",
+    "paternalLastName": "Camargo",
+    "specialty": "Urología",
+    "email": "helena@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Magdalena Contreras",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Irma",
+    "paternalLastName": "Silva",
+    "specialty": "Traumatología",
+    "email": "irma@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tlalpan",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Isadora",
+    "paternalLastName": "Montiel",
+    "specialty": "Angiología",
+    "email": "isadora@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Álvaro Obregón",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Itzel",
+    "paternalLastName": "Espinosa",
+    "specialty": "Neumología",
+    "email": "itzel@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuajimalpa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Jazmin",
+    "paternalLastName": "Dominguez",
+    "specialty": "Oncología",
+    "email": "jazmin@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Jennifer",
+    "paternalLastName": "Martinez",
+    "specialty": "Medicina familiar",
+    "email": "jennifer@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Azcapotzalco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Jessica",
+    "paternalLastName": "Ornelas",
+    "specialty": "Pediatría",
+    "email": "jessica@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Iztapalapa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Julia",
     "paternalLastName": "Antonio",
-    "specialty": "Infectología",
+    "specialty": "Nefrología",
+    "email": "julia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Azcapotzalco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Karen",
+    "paternalLastName": "Hernandez",
+    "specialty": "Psiquiatría",
+    "email": "karen@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Álvaro Obregón",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Karina",
+    "paternalLastName": "Cortes",
+    "specialty": "Urología",
+    "email": "karina@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Benito Juárez",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Karla",
+    "paternalLastName": "Briseño",
+    "specialty": "Traumatología",
+    "email": "karla@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Katya",
+    "paternalLastName": "Valenzuela",
+    "specialty": "Medicina interna",
+    "email": "katya@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Gustavo A. Madero",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Kimberly",
+    "paternalLastName": "Huerta",
+    "specialty": "Pediatría",
     "email": "kimberly@doctor.com",
     "password": hashPass,
     "address": {
@@ -611,165 +611,9 @@ const doctors = [
   },
   {
     "name": "Laura",
-    "paternalLastName": "Hernandez",
-    "specialty": "Oftalmología",
-    "email": "laura@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Álvaro Obregón",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Liliana",
-    "paternalLastName": "Cortes",
-    "specialty": "Neurología",
-    "email": "liliana@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Benito Juárez",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Lisa",
-    "paternalLastName": "Briseño",
-    "specialty": "Urología",
-    "email": "lisa@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Cuauhtémoc",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Lizbeth",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Hematología",
-    "email": "lizbeth@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Gustavo A. Madero",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Lizeth",
-    "paternalLastName": "Huerta",
-    "specialty": "Medicina intensiva",
-    "email": "lizeth@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Azcapotzalco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Lupita",
     "paternalLastName": "Lima",
-    "specialty": "Urología",
-    "email": "lupita@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Gustavo A. Madero",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Margarita",
-    "paternalLastName": "Silva",
     "specialty": "Geriatría",
-    "email": "margarita@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tláhuac",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Maria",
-    "paternalLastName": "Fermin",
-    "specialty": "Anestesiología",
-    "email": "maria@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztapalapa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Mariana",
-    "paternalLastName": "Montiel",
-    "specialty": "Nutriología",
-    "email": "mariana@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztapalapa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Maribel",
-    "paternalLastName": "Torres",
-    "specialty": "Medicina familiar",
-    "email": "maribel@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Magdalena Contreras",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Marisol",
-    "paternalLastName": "Pichardo",
-    "specialty": "Gastroenterología",
-    "email": "marisol@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Cuajimalpa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Marlene",
-    "paternalLastName": "Altamirano",
-    "specialty": "Alergología",
-    "email": "marlene@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztacalco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Martha",
-    "paternalLastName": "Dominguez",
-    "specialty": "Medicina intensiva",
-    "email": "martha@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tláhuac",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Maya",
-    "paternalLastName": "Morales",
-    "specialty": "Angiología",
-    "email": "maya@doctor.com",
+    "email": "laura@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -778,22 +622,46 @@ const doctors = [
     }
   },
   {
-    "name": "Melissa",
-    "paternalLastName": "Torres",
-    "specialty": "Medicina del deporte",
-    "email": "melissa@doctor.com",
+    "name": "Liliana",
+    "paternalLastName": "Gonzalez",
+    "specialty": "Traumatología",
+    "email": "liliana@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Álvaro Obregón",
+      "borough": "Tláhuac",
       "city": "CDMX"
     }
   },
   {
-    "name": "Michelle",
-    "paternalLastName": "Hernandez",
-    "specialty": "Gastroenterología",
-    "email": "michelle@doctor.com",
+    "name": "Lisa",
+    "paternalLastName": "Fermin",
+    "specialty": "Angiología",
+    "email": "lisa@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Iztapalapa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Lizbeth",
+    "paternalLastName": "Montiel",
+    "specialty": "Medicina familiar",
+    "email": "lizbeth@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Lizeth",
+    "paternalLastName": "Montiel",
+    "specialty": "Medicina interna",
+    "email": "lizeth@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -802,46 +670,34 @@ const doctors = [
     }
   },
   {
-    "name": "Miriam",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Reumatología",
-    "email": "miriam@doctor.com",
+    "name": "Lupita",
+    "paternalLastName": "Fermin",
+    "specialty": "Endocrinología",
+    "email": "lupita@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
+      "borough": "Álvaro Obregón",
       "city": "CDMX"
     }
   },
   {
-    "name": "Nadia",
-    "paternalLastName": "Ornelas",
-    "specialty": "Medicina forense",
-    "email": "nadia@doctor.com",
+    "name": "Margarita",
+    "paternalLastName": "Aguilar",
+    "specialty": "Ginecología y obstetricia",
+    "email": "margarita@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Azcapotzalco",
+      "borough": "Cuauhtémoc",
       "city": "CDMX"
     }
   },
   {
-    "name": "Nancy",
-    "paternalLastName": "Dominguez",
-    "specialty": "Nutriología",
-    "email": "nancy@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Iztapalapa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Natali",
-    "paternalLastName": "Huerta",
-    "specialty": "Otorrinolaringología",
-    "email": "natali@doctor.com",
+    "name": "Maria",
+    "paternalLastName": "Torres",
+    "specialty": "Neurología",
+    "email": "maria@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -850,10 +706,82 @@ const doctors = [
     }
   },
   {
-    "name": "Natalia",
+    "name": "Mariana",
+    "paternalLastName": "Antonio",
+    "specialty": "Otorrinolaringología",
+    "email": "mariana@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Maribel",
+    "paternalLastName": "Martin",
+    "specialty": "Alergología",
+    "email": "maribel@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Iztapalapa",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Marisol",
+    "paternalLastName": "Espinosa",
+    "specialty": "Reumatología",
+    "email": "marisol@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tlalpan",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Marlene",
+    "paternalLastName": "Valenzuela",
+    "specialty": "Otorrinolaringología",
+    "email": "marlene@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tlalpan",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Martha",
+    "paternalLastName": "Silva",
+    "specialty": "Angiología",
+    "email": "martha@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Maya",
+    "paternalLastName": "Hernandez",
+    "specialty": "Medicina interna",
+    "email": "maya@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tláhuac",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Melissa",
     "paternalLastName": "Lopez",
-    "specialty": "Medicina del deporte",
-    "email": "natalia@doctor.com",
+    "specialty": "Neumología",
+    "email": "melissa@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -862,10 +790,10 @@ const doctors = [
     }
   },
   {
-    "name": "Nelly",
+    "name": "Michelle",
     "paternalLastName": "Dominguez",
-    "specialty": "Endocrinología",
-    "email": "nelly@doctor.com",
+    "specialty": "Gastroenterología",
+    "email": "michelle@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -874,8 +802,80 @@ const doctors = [
     }
   },
   {
-    "name": "Olivia",
+    "name": "Miriam",
     "paternalLastName": "Lima",
+    "specialty": "Traumatología",
+    "email": "miriam@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Milpa Alta",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Nadia",
+    "paternalLastName": "Martinez",
+    "specialty": "Endocrinología",
+    "email": "nadia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Nancy",
+    "paternalLastName": "Pichardo",
+    "specialty": "Otorrinolaringología",
+    "email": "nancy@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Milpa Alta",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Natali",
+    "paternalLastName": "Huerta",
+    "specialty": "Dermatología",
+    "email": "natali@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Natalia",
+    "paternalLastName": "Andrade",
+    "specialty": "Urología",
+    "email": "natalia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Xochimilco",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Nelly",
+    "paternalLastName": "Cortes",
+    "specialty": "Nefrología",
+    "email": "nelly@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Venustiano Carranza",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Olivia",
+    "paternalLastName": "Torres",
     "specialty": "Neumología",
     "email": "olivia@doctor.com",
     "password": hashPass,
@@ -887,105 +887,33 @@ const doctors = [
   },
   {
     "name": "Pamela",
-    "paternalLastName": "Martinez",
-    "specialty": "Dermatología",
+    "paternalLastName": "Fermin",
+    "specialty": "Psiquiatría",
     "email": "pamela@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Cuauhtémoc",
+      "borough": "Venustiano Carranza",
       "city": "CDMX"
     }
   },
   {
     "name": "Paola",
-    "paternalLastName": "Pichardo",
-    "specialty": "Medicina forense",
+    "paternalLastName": "Aguilar",
+    "specialty": "Endocrinología",
     "email": "paola@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Milpa Alta",
+      "borough": "Xochimilco",
       "city": "CDMX"
     }
   },
   {
     "name": "Paula",
-    "paternalLastName": "Huerta",
-    "specialty": "Cardiología",
+    "paternalLastName": "Cruz",
+    "specialty": "Ginecología y obstetricia",
     "email": "paula@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Xochimilco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Paulina",
-    "paternalLastName": "Andrade",
-    "specialty": "Neurología",
-    "email": "paulina@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Xochimilco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Petra",
-    "paternalLastName": "Cortes",
-    "specialty": "Infectología",
-    "email": "petra@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Quetzalli",
-    "paternalLastName": "Torres",
-    "specialty": "Nutriología",
-    "email": "quetzalli@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Milpa Alta",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Regina",
-    "paternalLastName": "Martinez",
-    "specialty": "Gastroenterología",
-    "email": "regina@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Venustiano Carranza",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Renata",
-    "paternalLastName": "Aguilar",
-    "specialty": "Oftalmología",
-    "email": "renata@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Cuajimalpa",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Samantha",
-    "paternalLastName": "Valenzuela",
-    "specialty": "Dermatología",
-    "email": "samantha@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -994,10 +922,10 @@ const doctors = [
     }
   },
   {
-    "name": "Sandra",
-    "paternalLastName": "Gonzalez",
-    "specialty": "Angiología",
-    "email": "sandra@doctor.com",
+    "name": "Paulina",
+    "paternalLastName": "Antonio",
+    "specialty": "Traumatología",
+    "email": "paulina@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1006,10 +934,10 @@ const doctors = [
     }
   },
   {
-    "name": "Sara",
+    "name": "Petra",
     "paternalLastName": "Valenzuela",
-    "specialty": "Nefrología",
-    "email": "sara@doctor.com",
+    "specialty": "Reumatología",
+    "email": "petra@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1018,10 +946,10 @@ const doctors = [
     }
   },
   {
-    "name": "Silvia",
+    "name": "Quetzalli",
     "paternalLastName": "Antonio",
-    "specialty": "Ginecología y obstetricia",
-    "email": "silvia@doctor.com",
+    "specialty": "Medicina familiar",
+    "email": "quetzalli@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1030,22 +958,22 @@ const doctors = [
     }
   },
   {
-    "name": "Sofia",
+    "name": "Regina",
     "paternalLastName": "Jimenez",
-    "specialty": "Oftalmología",
-    "email": "sofia@doctor.com",
+    "specialty": "Geriatría",
+    "email": "regina@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Gustavo A. Madero",
+      "borough": "Benito Juárez",
       "city": "CDMX"
     }
   },
   {
-    "name": "Tania",
-    "paternalLastName": "Briseño",
-    "specialty": "Medicina familiar",
-    "email": "tania@doctor.com",
+    "name": "Renata",
+    "paternalLastName": "Montiel",
+    "specialty": "Traumatología",
+    "email": "renata@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1054,10 +982,10 @@ const doctors = [
     }
   },
   {
-    "name": "Tina",
+    "name": "Samantha",
     "paternalLastName": "Altamirano",
-    "specialty": "Medicina forense",
-    "email": "tina@doctor.com",
+    "specialty": "Otorrinolaringología",
+    "email": "samantha@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1066,10 +994,10 @@ const doctors = [
     }
   },
   {
-    "name": "Valeria",
+    "name": "Sandra",
     "paternalLastName": "Ornelas",
-    "specialty": "Medicina física y rehabilitación",
-    "email": "valeria@doctor.com",
+    "specialty": "Oncología",
+    "email": "sandra@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1078,9 +1006,81 @@ const doctors = [
     }
   },
   {
-    "name": "Veronica",
+    "name": "Sara",
     "paternalLastName": "Jimenez",
-    "specialty": "Toxicología",
+    "specialty": "Pediatría",
+    "email": "sara@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Silvia",
+    "paternalLastName": "Contreras",
+    "specialty": "Gastroenterología",
+    "email": "silvia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Magdalena Contreras",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Sofia",
+    "paternalLastName": "Valenzuela",
+    "specialty": "Neurología",
+    "email": "sofia@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Tania",
+    "paternalLastName": "Jimenez",
+    "specialty": "Angiología",
+    "email": "tania@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Tláhuac",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Tina",
+    "paternalLastName": "Sanchez",
+    "specialty": "Endocrinología",
+    "email": "tina@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Cuauhtémoc",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Valeria",
+    "paternalLastName": "Cruz",
+    "specialty": "Endocrinología",
+    "email": "valeria@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Álvaro Obregón",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Veronica",
+    "paternalLastName": "Aguilar",
+    "specialty": "Oncología",
     "email": "veronica@doctor.com",
     "password": hashPass,
     "address": {
@@ -1091,8 +1091,8 @@ const doctors = [
   },
   {
     "name": "Victoria",
-    "paternalLastName": "Esparza",
-    "specialty": "Cardiología",
+    "paternalLastName": "Briseño",
+    "specialty": "Traumatología",
     "email": "victoria@doctor.com",
     "password": hashPass,
     "address": {
@@ -1103,33 +1103,9 @@ const doctors = [
   },
   {
     "name": "Wanda",
-    "paternalLastName": "Jimenez",
-    "specialty": "Medicina intensiva",
-    "email": "wanda@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Tláhuac",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Ximena",
     "paternalLastName": "Esparza",
-    "specialty": "Hematología",
-    "email": "ximena@doctor.com",
-    "password": hashPass,
-    "address": {
-      "streetAddress": "Calle 123",
-      "borough": "Azcapotzalco",
-      "city": "CDMX"
-    }
-  },
-  {
-    "name": "Yaretzi",
-    "paternalLastName": "Morales",
-    "specialty": "Traumatología",
-    "email": "yaretzi@doctor.com",
+    "specialty": "Neurología",
+    "email": "wanda@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
@@ -1138,14 +1114,38 @@ const doctors = [
     }
   },
   {
+    "name": "Ximena",
+    "paternalLastName": "Camargo",
+    "specialty": "Nefrología",
+    "email": "ximena@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Álvaro Obregón",
+      "city": "CDMX"
+    }
+  },
+  {
+    "name": "Yaretzi",
+    "paternalLastName": "Martinez",
+    "specialty": "Medicina familiar",
+    "email": "yaretzi@doctor.com",
+    "password": hashPass,
+    "address": {
+      "streetAddress": "Calle 123",
+      "borough": "Coyoacán",
+      "city": "CDMX"
+    }
+  },
+  {
     "name": "Zita",
-    "paternalLastName": "Cruz",
-    "specialty": "Oncología",
+    "paternalLastName": "Esparza",
+    "specialty": "Nefrología",
     "email": "zita@doctor.com",
     "password": hashPass,
     "address": {
       "streetAddress": "Calle 123",
-      "borough": "Cuauhtémoc",
+      "borough": "Benito Juárez",
       "city": "CDMX"
     }
   }
