@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 const connectDB = require("./config/db");
 
@@ -55,6 +56,6 @@ app.use("/search", search);
 // });
 
 // LISTEN
-app.listen(3000, () => console.log(`Servidor listo en el puerto 3000`));
+app.listen(PORT, () => console.log(`Servidor listo en el puerto 3000`));
 
 module.exports = app;
