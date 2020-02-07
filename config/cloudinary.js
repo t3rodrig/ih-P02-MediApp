@@ -11,11 +11,9 @@ cloudinary.config({
 
 var storage = cloudinaryStorage({
   cloudinary,
-  folder: "img",
+  folder: "Medik+/profile",
   allowedFormats: ["jpg", "png"],
-  filename: function(req, file, cb) {
-    cb(null, file.originalname);
-  }
+  trasnformation: [{ width: 150, height: 150 }]
 });
 
 const uploadCloud = multer({ storage });
