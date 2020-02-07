@@ -51,6 +51,9 @@ app.use("/profile", profile);
 const search = require("./routes/search.route");
 app.use("/search", search);
 
+const prescription = require("./routes/prescription.route");
+app.use("/prescription", prescription);
+
 // app.all("*", (req, res, next) => {
 //   res.render("/");
 // });

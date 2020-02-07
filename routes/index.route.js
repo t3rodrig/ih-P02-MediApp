@@ -6,6 +6,7 @@ const Patient = require("../models/Patient");
 
 router.get("/", async (req, res, next) => {
   const user = req.session.currentUser;
+  const doctor = user.role;
   // try {
   //   const data = new FormData();
   //   data.append(
@@ -27,7 +28,9 @@ router.get("/", async (req, res, next) => {
   //   console.log(error);
   // }
 
-  if (user) {
+  if (user && user.role === "doctor") {
+    res.render("index", { user, doctor });
+  } else if (user) {
     res.render("index", { user });
   } else {
     res.render("index");

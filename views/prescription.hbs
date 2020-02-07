@@ -1,0 +1,46 @@
+<div class="row justify-content-center align-items-center my-5">
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-11">
+				<h2 class="s-title titles">Nueva Receta</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center align-items-center">
+			<div class="col-10">
+				<form action="" method="POST">
+					<div class="form-group">
+						<label for="inputGroupSelect01" class="text-light">Author</label>
+						<select class="custom-select" id="inputGroupSelect01" name="author" required>
+							<option value="{{user._id}}">{{user.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="inputGroupSelect01" class="text-light">Topic</label>
+						<select class="custom-select" id="inputGroupSelect01" name="topic" required>
+							<option value="BASEBALL">Baseball</option>
+							<option value="BASKETBALL">Basketball</option>
+							<option value="FOOTBALL">Football</option>
+							<option value="SOCCER">Soccer</option>
+							<option value="OTHER">Other</option>
+						</select>
+					</div>
+					<div class="form-group d-flex flex-column">
+						<label for="imgPath" class="text-light">Cover Image</label>
+						<input type="text" class="form-control" name="imgPath" placeholder="Paste url image" required>
+					</div>
+					<div class="form-group d-flex flex-column">
+						<label for="title" class="text-light">Title</label>
+						<input type="text" class="form-control" name="title" placeholder="Title" required>
+					</div>
+					<div class="form-group d-flex flex-column">
+						<label for="preview" class="text-light">Preview</label>
+						<input type="text" class="form-control" name="preview" placeholder="Preview" required>
+					</div>
+					<textarea name="content">
+					</textarea>
+					<button type="submit" class="btn btn-light my-3">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
