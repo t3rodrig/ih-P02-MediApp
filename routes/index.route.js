@@ -55,6 +55,7 @@ router.get("/patients", (req, res, next) => {
 });
 
 router.get("/reserve", async (req, res, next) => {
+  const user = req.session.currentUser;
   // obtener las horas disponibles por semana
   /*
   const data = [
@@ -87,7 +88,11 @@ router.get("/reserve", async (req, res, next) => {
 
     try {
       await Doctor.findById(doctorId).then(doctorInfo => {
-        res.render("reserve", { days, doctorInfo });
+        if (user) {
+          res.render("reserve", { user, days, doctorInfo });
+        } else {
+          res.render("reserve", { days, doctorInfo });
+        }
       });
     } catch (error) {
       console.log(error);

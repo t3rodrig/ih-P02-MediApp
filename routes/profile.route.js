@@ -53,7 +53,7 @@ router.get("/doctor/:doctorID", async (req, res, next) => {
   if (!user) {
     return res.status(404).render("not-found");
   }
-  res.render("profile-doctor", { user });
+  res.render("profile-doctor", { user, doctor });
 });
 
 // Post edit profile

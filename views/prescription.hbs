@@ -32,20 +32,26 @@
 			<div class="col-10">
 				<form action="" method="POST">
 					<div class="form-group">
-						<label for="inputGroupSelect01" class="texts">Médico</label>
-						<select class="custom-select" id="inputGroupSelect01" name="author" disabled>
+						<label for="doctor" class="texts">Médico</label>
+						<select class="custom-select" id="doctor" name="doctor" disabled>
 							<option value="{{user._id}}">{{user.name}} {{user.paternalLastName}}</option>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="inputGroupSelect01" class="texts">Edad Paciente</label>
-						<select class="custom-select" id="inputGroupSelect01" name="topic" required>
-							<option value="{{patient}}">Baseball</option>
+						<label for="patientAge" class="texts">Edad Paciente</label>
+						<select class="custom-select" id="patientAge" name="patientAge" disabled>
+							<option class="form-control texts" name="patientAge" value="{{patient.birthdate}}">
+								{{patient.birthdate}}
+							</option>
 						</select>
 					</div>
 					<div class="form-group d-flex flex-column">
-						<label for="imgPath" class="texts">Cover Image</label>
-						<input type="text" class="form-control" name="imgPath" placeholder="Paste url image" required>
+						<label for="bloodType" class="texts">Tipo de Sangre</label>
+						<select class="custom-select" id="bloodType" name="bloodType" disabled>
+							<option class="form-control texts" name="bloodType" value="{{patient.bloodType}}">
+								{{patient.bloodType}}
+							</option>
+						</select>
 					</div>
 					<div class="form-group d-flex flex-column">
 						<label for="title" class="texts">Title</label>
