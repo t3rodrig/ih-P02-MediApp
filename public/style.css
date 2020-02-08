@@ -147,3 +147,10 @@ ul .li-benefits {
 #photo {
   font-size: 10px;
 }
+
+/* citas */
+.cards-container {
+  display: flex;
+  padding: 10% 20%;
+  justify-content: space-around;
+}

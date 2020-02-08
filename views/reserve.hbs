@@ -1,16 +1,48 @@
 <div class="row">
-    {{#each days}}
-        <div class="col">
-            <h4>{{@key}}</h4>
-        </div>
-    {{/each}}
+	<div class="col-12 my-5">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-11">
+				<div class="row">
+					<div class="col-11 col-md-2 d-flex justify-content-center align-items-start">
+						<img class="rounded-circle profile-pic" src="https://via.placeholder.com/100" alt="">
+					</div>
+					<div class="col-10">
+						<div class="row">
+							<div class="col-12">
+								<h2 class="titles p-title">
+									{{doctor.name}} {{doctor.paternalLastName}} {{doctor.maternalLastName}}
+								</h2>
+							</div>
+							<div class="col-12">
+								<h4>
+									{{doctor.email}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4> Cédula : {{doctor.idCard}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Especialidad : {{doctor.specialty}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Consultorio : {{doctor.address.streetAddress}}, {{doctor.address.borough}}
+								</h4>
+							</div>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="row">
-        {{#each days}}
-        <div class="col">
-            {{#each this}}
-                <h4> <a href="#" role="button" class="btn btn-primary">{{this}}</a></h4>
-            {{/each}}
-        </div>
-    {{/each}}
+
+
+<div class="cards-container">
+  {{#each days}}
+    {{> dayCard this}}
+  {{/each}}
 </div>
