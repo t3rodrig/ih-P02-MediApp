@@ -27,9 +27,12 @@ router.get("/getPatientInfo", async (req, res, next) => {
   const patientId = req.query.patient;
 
   try {
-    console.log(patientId);
     const patient = await Patient.findById(patientId);
-    console.log(patient);
+    if (patient.birthdate) {
+      let currentDate = new Date();
+      let birthdate = patient.birthdate;
+      patient.age = Math.floor((currentDate - birthdate) / 31536000000);
+    }
     res.render("prescription", { user, patient });
   } catch (err) {
     console.log(err);

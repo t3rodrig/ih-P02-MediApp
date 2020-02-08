@@ -154,3 +154,11 @@ ul .li-benefits {
   padding: 10% 20%;
   justify-content: space-around;
 }
+
+/* Prescriptio */
+
+.prescription-area {
+  resize: none;
+  height: 200px !important;
+  width: 100%;
+}

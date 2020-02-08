@@ -28,42 +28,100 @@
 			</div>
 		</div>
 		{{else}}
-		<div class="row justify-content-center align-items-center">
+		<div class="row justify-content-center align-items-center mb-5">
 			<div class="col-10">
 				<form action="" method="POST">
-					<div class="form-group">
-						<label for="doctor" class="texts">Médico</label>
-						<select class="custom-select" id="doctor" name="doctor" disabled>
-							<option value="{{user._id}}">{{user.name}} {{user.paternalLastName}}</option>
-						</select>
+					<div class="form-row">
+						<div class="col-12">
+							<label for="" class="texts font-weight-bold border-bottom my-3">MÉDICO</label>
+						</div>
 					</div>
-					<div class="form-group">
-						<label for="patientAge" class="texts">Edad Paciente</label>
-						<select class="custom-select" id="patientAge" name="patientAge" disabled>
-							<option class="form-control texts" name="patientAge" value="{{patient.birthdate}}">
-								{{patient.birthdate}}
-							</option>
-						</select>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="doctorName" class="texts">Nombre</label>
+							<select class="custom-select block-select" id="doctorName" name="doctorName" disabled>
+								<option value="{{user._id}}">{{user.name}}</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-12 my-2">
+							<label for="doctorPaternal" class="texts">Apellido</label>
+							<select class="custom-select block-select" id="doctorPaternal" name="doctorPaternal" disabled>
+								<option value="{{user._id}}"> {{user.paternalLastName}}</option>
+							</select>
+						</div>
 					</div>
-					<div class="form-group d-flex flex-column">
-						<label for="bloodType" class="texts">Tipo de Sangre</label>
-						<select class="custom-select" id="bloodType" name="bloodType" disabled>
-							<option class="form-control texts" name="bloodType" value="{{patient.bloodType}}">
-								{{patient.bloodType}}
-							</option>
-						</select>
+					<div class="form-row">
+						<div class="col-12">
+							<label for="" class="texts font-weight-bold border-bottom my-3">PACIENTE</label>
+						</div>
 					</div>
-					<div class="form-group d-flex flex-column">
-						<label for="title" class="texts">Title</label>
-						<input type="text" class="form-control" name="title" placeholder="Title" required>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientName" class="texts">Nombre</label>
+							<select class="custom-select" id="patientName" name="patientName" disabled>
+								<option class="form-control texts" name="patientName" value="{{patient.name}}">
+									{{patient.name}}
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientPaternalLastName" class="texts">Apellido</label>
+							<select class="custom-select" id="patientPaternalLastName" name="patientPaternalLastName" disabled>
+								<option class="form-control texts" name="patientPaternalLastName" value="{{patient.paternalLastName}}">
+									{{patient.paternalLastName}}
+								</option>
+							</select>
+						</div>
 					</div>
-					<div class="form-group d-flex flex-column">
-						<label for="preview" class="texts">Preview</label>
-						<input type="text" class="form-control" name="preview" placeholder="Preview" required>
+					<div class="form-row">
+						<div class="col-md-3 col-12 my-2">
+							<label for="patientAge" class="texts">Edad Paciente</label>
+							<select class="custom-select" id="patientAge" name="patientAge" disabled>
+								<option class="form-control texts" name="patientAge" value="{{patient.birthdate}}">
+									{{patient.age}}
+								</option>
+							</select>
+						</div>
+						<div class="col-4"></div>
 					</div>
-					<textarea name="content">
-					</textarea>
-					<button type="submit" class="btn btn-light my-3">Submit</button>
+					<div class="form-row">
+						<div class="col-md-3 col-6 my-2">
+							<label for="bloodType" class="texts">Tipo de Sangre</label>
+							<select class="custom-select" id="bloodType" name="bloodType" disabled>
+								<option class="form-control texts" name="bloodType" value="{{patient.bloodType}}">
+									{{patient.bloodType}}
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<label for="height" class="texts">Altura</label>
+							<select class="custom-select" id="height" name="height" disabled>
+								<option class="form-control texts" name="height" value="{{patient.height}} m">
+									{{patient.height}} m
+								</option>
+							</select>
+						</div>
+						<div class="col-md-3 col-6 my-2">
+							<label for="weight" class="texts">Peso</label>
+							<select class="custom-select" id="weight" name="weight" disabled>
+								<option class="form-control texts" name="weight" value="{{patient.weight}} kg">
+									{{patient.weight}} kg
+								</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-3">
+							<label for="dx" class="texts">Diagnóstico</label>
+							<input type="text" class="form-control texts" name="dx" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-10">
+							<textarea class="form-control my-3 prescription-area" id="prescription" placeholder="Receta" required></textarea>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-mpk texts text-white">Generar Receta</button>
 				</form>
 			</div>
 		</div>
