@@ -8,6 +8,9 @@ const doctorSchema = new Schema(
     maternalLastName: { type: String },
     idCard: { type: String, required: false },
     specialty: { type: String },
+    profilePic: {
+      type: String
+    },
     email: {
       type: String,
       match: /[\w\.-]+@[\w\.-]+\.[\w\.]+/,

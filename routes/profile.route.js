@@ -26,7 +26,16 @@ router.get("/patient/edit", (req, res, next) => {
 
 router.get("/doctor/edit", (req, res, next) => {
   const user = req.session.currentUser;
-  res.render("editProfileDoctor", { user });
+
+  if (user) {
+    if (user.specialty === "") {
+      res.render("editProfileDoctor", { user, empty: true });
+    } else {
+      res.render("editProfileDoctor", { user, empty: false });
+    }
+  } else {
+    res.render("index");
+  }
 });
 
 // Get profile layout
@@ -43,6 +52,8 @@ router.get("/patient/:patientID", async (req, res, next) => {
     let birthdate = user.birthdate;
     user.age = Math.floor((currentDate - birthdate) / 31536000000);
   }
+
+  console.log(user);
   res.render("profile-patient", { user });
 });
 
@@ -53,6 +64,7 @@ router.get("/doctor/:doctorID", async (req, res, next) => {
   if (!user) {
     return res.status(404).render("not-found");
   }
+
   res.render("profile-doctor", { user, doctor });
 });
 
@@ -111,46 +123,58 @@ router.post(
   }
 );
 
-router.post("/doctor/edit", async (req, res, next) => {
-  const user = req.session.currentUser;
-  const personId = user._id;
-  const oldPass = req.body.oldPassword;
-  const newPass = req.body.newPassword;
-  const confirmPass = req.body.confirmPassword;
-  const data = {};
-  const fields = [
-    "name",
-    "paternalLastName",
-    "maternalLastName",
-    "idCard",
-    "specialty",
-    "location"
-  ];
-
-  if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
-    for (let item of fields) {
-      data[item] = req.body[item];
+router.post(
+  "/doctor/edit",
+  uploadCloud.single("photo"),
+  async (req, res, next) => {
+    const user = req.session.currentUser;
+    const personId = user._id;
+    const oldPass = req.body.oldPassword;
+    const newPass = req.body.newPassword;
+    const confirmPass = req.body.confirmPassword;
+    let imgPath;
+    if (req.file) {
+      imgPath = req.file.url;
     }
+    const data = {};
+    const fields = [
+      "name",
+      "paternalLastName",
+      "maternalLastName",
+      "idCard",
+      "specialty",
+      "location"
+    ];
 
-    if (newPass) {
-      const salt = bcrypt.genSaltSync(10);
-      const hashPass = bcrypt.hashSync(newPass, salt);
-      data.password = hashPass;
+    if (newPass === confirmPass && bcrypt.compareSync(oldPass, user.password)) {
+      for (let item of fields) {
+        data[item] = req.body[item];
+      }
+      if (imgPath) {
+        data.profilePic = imgPath;
+      }
+
+      if (newPass) {
+        const salt = bcrypt.genSaltSync(10);
+        const hashPass = bcrypt.hashSync(newPass, salt);
+        data.password = hashPass;
+      }
+
+      req.session.currentUser = await Doctor.findByIdAndUpdate(
+        personId,
+        { $set: data },
+        { new: true }
+      );
+
+      res.redirect(`/profile/doctor/${personId}`);
+    } else {
+      return res.render("editProfileDoctor", {
+        user,
+        messageDoc: "Las contraseñas no coinciden"
+      });
     }
-
-    req.session.currentUser = await Doctor.findByIdAndUpdate(
-      personId,
-      { $set: data },
-      { new: true }
-    );
-    res.redirect(`/profile/doctor/${personId}`);
-  } else {
-    return res.render("editProfileDoctor", {
-      user,
-      messageDoc: "Las contraseñas no coinciden"
-    });
   }
-});
+);
 
 router.all("*", (req, res, next) => {
   res.status(404).render("not-found");

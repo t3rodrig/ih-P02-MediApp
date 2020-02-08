@@ -107,30 +107,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row mb-5">
 							<div class="col-12">
 								<h2 class="titles p-title">
 									Expediente
 								</h2>
 								<div class="row justify-content-start align-items-center">
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
-									<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex justify-content-center align-items-center">
-										<p class="my-1">Radiografía</p>
-									</div>
+									{{#each user.prescriptions}}
+										<div class="col-md-3 col-5 mx-1 my-2 border-boxes border-dark rounded d-flex flex-column justify-content-center align-items-center">
+											<a href="/prescription/receta/{{this._id}}" class="texts">
+												<p class="my-1">{{this.dx}}</p>
+												<p class="my-1">{{this.date}}</p>
+											</a>
+										</div>
+									{{/each}}
 								</div>
 							</div>
 						</div>

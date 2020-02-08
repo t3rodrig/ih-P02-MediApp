@@ -18,14 +18,32 @@ const patientSchema = new Schema(
     profilePic: {
       type: String
     },
-    birthdate: {type: Date},
+    birthdate: { type: Date },
     bloodType: {
       type: String,
-      enum: ['O-', 'O+', 'A-', 'A+', 'B-', 'B+', 'AB-', 'AB+']
+      enum: ["O-", "O+", "A-", "A+", "B-", "B+", "AB-", "AB+"]
     },
-    height: {type: Number, min: 0, max: 2}, // meters
-    weight: {type: Number, min: 0, max: 200}, // kilograms
+    height: { type: Number, min: 0, max: 2 }, // meters
+    weight: { type: Number, min: 0, max: 200 }, // kilograms
     appointment: [{ type: Schema.Types.ObjectId, ref: "Appointment" }],
+    prescriptions: [
+      {
+        doctorName: String,
+        doctorPaternalLastName: String,
+        doctorIDcard: Number,
+        patientName: String,
+        patientPaternalLastName: String,
+        patientAge: Number,
+        bloodType: String,
+        height: String,
+        weight: String,
+        bodyTemperature: String,
+        allergies: String,
+        dx: String,
+        treatment: String,
+        date: String
+      }
+    ],
     role: {
       type: String,
       default: "patient"
