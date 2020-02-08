@@ -10,26 +10,26 @@
 						<div class="row">
 							<div class="col-12">
 								<h2 class="titles p-title">
-									{{doctor.name}} {{doctor.paternalLastName}} {{doctor.maternalLastName}}
+									{{doctorInfo.name}} {{doctorInfo.paternalLastName}} {{doctorInfo.maternalLastName}}
 								</h2>
 							</div>
 							<div class="col-12">
 								<h4>
-									{{doctor.email}}
+									{{doctorInfo.email}}
 								</h4>
 							</div>
 							<div class="col-12">
-								<h4> Cédula : {{doctor.idCard}}
-								</h4>
-							</div>
-							<div class="col-12">
-								<h4>
-									Especialidad : {{doctor.specialty}}
+								<h4> Cédula : {{doctorInfo.idCard}}
 								</h4>
 							</div>
 							<div class="col-12">
 								<h4>
-									Consultorio : {{doctor.address.streetAddress}}, {{doctor.address.borough}}
+									Especialidad : {{doctorInfo.specialty}}
+								</h4>
+							</div>
+							<div class="col-12">
+								<h4>
+									Consultorio : {{doctorInfo.address.streetAddress}}, {{doctorInfo.address.borough}}
 								</h4>
 							</div>
 						</div>

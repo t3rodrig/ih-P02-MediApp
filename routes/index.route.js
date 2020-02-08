@@ -86,16 +86,14 @@ router.get("/reserve", async (req, res, next) => {
     const doctorId = req.query.doctorId;
 
     try {
-      await Doctor.findById(doctorId).then(doctor => {
-        res.render("reserve", { days, doctor });
+      await Doctor.findById(doctorId).then(doctorInfo => {
+        res.render("reserve", { days, doctorInfo });
       });
     } catch (error) {
       console.log(error);
       res.render("not-found");
     }
-
   }
-
 });
 
 module.exports = router;
