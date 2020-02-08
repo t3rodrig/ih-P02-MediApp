@@ -72,4 +72,8 @@ router.post("/patient", async (req, res, next) => {
   }
 });
 
+router.all("*", (req, res, next) => {
+  res.status(404).render("not-found");
+});
+
 module.exports = router;

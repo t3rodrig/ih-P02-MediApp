@@ -56,7 +56,7 @@ router.post("/doctor", async (req, res, next) => {
       await Doctor.create({
         name,
         paternalLastName,
-        password: hashPass, 
+        password: hashPass,
         email
       });
 
@@ -121,6 +121,10 @@ router.post("/patient", async (req, res, next) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+router.all("*", (req, res, next) => {
+  res.status(404).render("not-found");
 });
 
 module.exports = router;

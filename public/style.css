@@ -38,6 +38,13 @@ body {
   height: 65vh;
 }
 
+.error {
+  color: #151518;
+  font-size: 42px;
+  font-size: "Open Sans";
+  font-weight: 700;
+}
+
 /* home page */
 
 .index {

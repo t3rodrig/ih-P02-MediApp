@@ -22,9 +22,17 @@
 		</div>
 
 		<div class="row justify-content-around align-items-center my-5">
-			{{#each doctors}}
-			{{> searchResultPartial}}
-  			{{/each}}
+			{{#if doctors}}
+				{{#each doctors}}
+					{{> searchResultPartial}}
+				{{/each}}
+			{{else}}
+				<div class="col-10 align-self-center my-5">
+					<h2 class="error">
+						No hemos encontrado doctores de con esta Especialidad
+					</h2>
+				</div>
+			{{/if}}
 		</div>
 	</div>
 </div>
