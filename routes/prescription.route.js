@@ -16,15 +16,15 @@ router.get("/receta/:id", async (req, res, next) => {
       return res.redirect("/");
     } else {
       const patient = await Patient.findById(user._id);
-      prescription = await patient.prescriptions.forEach(pres => {
+      prescription = patient.prescriptions.forEach(pres => {
         if (pres._id === req.params.id) {
           return (prescription = pres);
         }
         console.log(pres._id);
+        console.log("----------------------------------------------------");
+        console.log(prescription);
+        res.render("prescription-detail", { user, prescription });
       });
-      console.log("----------------------------------------------------");
-      console.log(prescription);
-      res.render("prescription-detail", { user, prescription });
     }
   } catch (err) {
     console.log(err);
@@ -100,6 +100,10 @@ router.post("/newPrescription", async (req, res, next) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+router.all("*", (req, res, next) => {
+  res.status(404).render("not-found");
 });
 
 module.exports = router;
