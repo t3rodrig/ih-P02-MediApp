@@ -17,12 +17,9 @@ router.get("/receta/:id", async (req, res, next) => {
     } else {
       const patient = await Patient.findById(user._id);
       prescription = patient.prescriptions.forEach(pres => {
-        if (pres._id === req.params.id) {
-          return (prescription = pres);
+        if (pres._id == req.params.id) {
+          prescription = pres;
         }
-        console.log(pres._id);
-        console.log("----------------------------------------------------");
-        console.log(prescription);
         res.render("prescription-detail", { user, prescription });
       });
     }

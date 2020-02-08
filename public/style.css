@@ -45,6 +45,10 @@ body {
   font-weight: 700;
 }
 
+.no-print {
+  display: none !important;
+}
+
 /* home page */
 
 .index {
