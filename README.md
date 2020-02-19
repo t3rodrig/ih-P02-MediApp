@@ -1,5 +1,4 @@
 ![medikplus](./public/images/medikplus.png)
-# medikplus
 
 ## Getting Started
 
