@@ -1,6 +1,9 @@
 # Dependency directory
 node_modules
 
+# tmp directory
+tmp
+
 # Debug log from npm
 npm-debug.log
 
