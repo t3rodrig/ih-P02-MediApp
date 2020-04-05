@@ -10,61 +10,61 @@ const hashPass = bcrypt.hashSync(process.env.DUMMY_PASS, salt);
 
 const patients = [
   {
-    name: "Fernanda",
+    firstName: "Fernanda",
     paternalLastName: "Hernández",
     email: "fernanda@example.com",
     password: hashPass
   },
   {
-    name: "Diana",
+    firstName: "Diana",
     paternalLastName: "García",
     email: "diana@example.com",
     password: hashPass
   },
   {
-    name: "Andrea",
+    firstName: "Andrea",
     paternalLastName: "López",
     email: "andrea@example.com",
     password: hashPass
   },
   {
-    name: "Ana",
+    firstName: "Ana",
     paternalLastName: "Martínez",
     email: "ana@example.com",
     password: hashPass
   },
   {
-    name: "María",
+    firstName: "María",
     paternalLastName: "Rodríguez",
     email: "maria@example.com",
     password: hashPass
   },
   {
-    name: "Mariana",
+    firstName: "Mariana",
     paternalLastName: "González",
     email: "mariana@example.com",
     password: hashPass
   },
   {
-    name: "Daniela",
+    firstName: "Daniela",
     paternalLastName: "Pérez",
     email: "daniela@example.com",
     password: hashPass
   },
   {
-    name: "Alejandra",
+    firstName: "Alejandra",
     paternalLastName: "Sánchez",
     email: "alejandra@example.com",
     password: hashPass
   },
   {
-    name: "Adriana",
+    firstName: "Adriana",
     paternalLastName: "Gómez",
     email: "adriana@example.com",
     password: hashPass
   },
   {
-    name: "Karla",
+    firstName: "Karla",
     paternalLastName: "Flores",
     email: "karla@example.com",
     password: hashPass

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const doctorSchema = new Schema(
   {
-    name: { type: String, required: true },
+    firstName: { type: String, required: true },
     paternalLastName: { type: String, required: true },
     maternalLastName: { type: String },
     idCard: { type: String, required: false },

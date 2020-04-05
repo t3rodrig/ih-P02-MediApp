@@ -10,7 +10,7 @@ const hashPass = bcrypt.hashSync(process.env.DUMMY_PASS, salt);
 
 const doctors = [
   {
-    name: "Abril",
+    firstName: "Abril",
     paternalLastName: "Garza",
     idCard: 1234,
     specialty: "Otorrinolaringología",
@@ -24,7 +24,7 @@ const doctors = [
     }
   },
   {
-    name: "Ada",
+    firstName: "Ada",
     paternalLastName: "Martinez",
     specialty: "Traumatología",
     email: "ada@doctor.com",
@@ -37,7 +37,7 @@ const doctors = [
     }
   },
   {
-    name: "Adriana",
+    firstName: "Adriana",
     paternalLastName: "Lopez",
     specialty: "Reumatología",
     email: "adriana@doctor.com",
@@ -50,7 +50,7 @@ const doctors = [
     }
   },
   {
-    name: "Alejandra",
+    firstName: "Alejandra",
     paternalLastName: "Sanchez",
     specialty: "Urología",
     email: "alejandra@doctor.com",
@@ -63,7 +63,7 @@ const doctors = [
     }
   },
   {
-    name: "Alexa",
+    firstName: "Alexa",
     paternalLastName: "Huerta",
     specialty: "Dermatología",
     email: "alexa@doctor.com",
@@ -76,7 +76,7 @@ const doctors = [
     }
   },
   {
-    name: "Alondra",
+    firstName: "Alondra",
     paternalLastName: "Antonio",
     specialty: "Nefrología",
     email: "alondra@doctor.com",
@@ -89,7 +89,7 @@ const doctors = [
     }
   },
   {
-    name: "Ana",
+    firstName: "Ana",
     paternalLastName: "Aguilar",
     specialty: "Traumatología",
     email: "ana@doctor.com",
@@ -102,7 +102,7 @@ const doctors = [
     }
   },
   {
-    name: "Anahi",
+    firstName: "Anahi",
     paternalLastName: "Huerta",
     specialty: "Traumatología",
     email: "anahi@doctor.com",
@@ -115,7 +115,7 @@ const doctors = [
     }
   },
   {
-    name: "Andrea",
+    firstName: "Andrea",
     paternalLastName: "Camargo",
     specialty: "Geriatría",
     email: "andrea@doctor.com",
@@ -128,7 +128,7 @@ const doctors = [
     }
   },
   {
-    name: "Arely",
+    firstName: "Arely",
     paternalLastName: "Cortes",
     specialty: "Oncología",
     email: "arely@doctor.com",
@@ -141,7 +141,7 @@ const doctors = [
     }
   },
   {
-    name: "Barbara",
+    firstName: "Barbara",
     paternalLastName: "Martin",
     specialty: "Urología",
     email: "barbara@doctor.com",
@@ -154,7 +154,7 @@ const doctors = [
     }
   },
   {
-    name: "Berenice",
+    firstName: "Berenice",
     paternalLastName: "Antonio",
     specialty: "Reumatología",
     email: "berenice@doctor.com",
@@ -167,7 +167,7 @@ const doctors = [
     }
   },
   {
-    name: "Brenda",
+    firstName: "Brenda",
     paternalLastName: "Valenzuela",
     specialty: "Dermatología",
     email: "brenda@doctor.com",
@@ -180,7 +180,7 @@ const doctors = [
     }
   },
   {
-    name: "Camila",
+    firstName: "Camila",
     paternalLastName: "Dominguez",
     specialty: "Alergología",
     email: "camila@doctor.com",
@@ -193,7 +193,7 @@ const doctors = [
     }
   },
   {
-    name: "Carolina",
+    firstName: "Carolina",
     paternalLastName: "Guzman",
     specialty: "Geriatría",
     email: "carolina@doctor.com",
@@ -206,7 +206,7 @@ const doctors = [
     }
   },
   {
-    name: "Cassandra",
+    firstName: "Cassandra",
     paternalLastName: "Briseño",
     specialty: "Neurología",
     email: "cassandra@doctor.com",
@@ -219,7 +219,7 @@ const doctors = [
     }
   },
   {
-    name: "Cecilia",
+    firstName: "Cecilia",
     paternalLastName: "Torres",
     specialty: "Cardiología",
     email: "cecilia@doctor.com",
@@ -232,7 +232,7 @@ const doctors = [
     }
   },
   {
-    name: "Claudia",
+    firstName: "Claudia",
     paternalLastName: "Lima",
     specialty: "Medicina interna",
     email: "claudia@doctor.com",
@@ -245,7 +245,7 @@ const doctors = [
     }
   },
   {
-    name: "Dafne",
+    firstName: "Dafne",
     paternalLastName: "Camargo",
     specialty: "Gastroenterología",
     email: "dafne@doctor.com",
@@ -258,7 +258,7 @@ const doctors = [
     }
   },
   {
-    name: "Daniela",
+    firstName: "Daniela",
     paternalLastName: "Alvarez",
     specialty: "Alergología",
     email: "daniela@doctor.com",
@@ -271,7 +271,7 @@ const doctors = [
     }
   },
   {
-    name: "Daryna",
+    firstName: "Daryna",
     paternalLastName: "Guzman",
     specialty: "Medicina familiar",
     email: "daryna@doctor.com",
@@ -284,7 +284,7 @@ const doctors = [
     }
   },
   {
-    name: "Denisse",
+    firstName: "Denisse",
     paternalLastName: "Dominguez",
     specialty: "Dermatología",
     email: "denisse@doctor.com",
@@ -297,7 +297,7 @@ const doctors = [
     }
   },
   {
-    name: "Diana",
+    firstName: "Diana",
     paternalLastName: "Montiel",
     specialty: "Dermatología",
     email: "diana@doctor.com",
@@ -310,7 +310,7 @@ const doctors = [
     }
   },
   {
-    name: "Dulce",
+    firstName: "Dulce",
     paternalLastName: "Morales",
     specialty: "Oncología",
     email: "dulce@doctor.com",
@@ -323,7 +323,7 @@ const doctors = [
     }
   },
   {
-    name: "Elena",
+    firstName: "Elena",
     paternalLastName: "Sanchez",
     specialty: "Nefrología",
     email: "elena@doctor.com",
@@ -336,7 +336,7 @@ const doctors = [
     }
   },
   {
-    name: "Elizabeth",
+    firstName: "Elizabeth",
     paternalLastName: "Andrade",
     specialty: "Urología",
     email: "elizabeth@doctor.com",
@@ -349,7 +349,7 @@ const doctors = [
     }
   },
   {
-    name: "Elyssa",
+    firstName: "Elyssa",
     paternalLastName: "Martinez",
     specialty: "Medicina interna",
     email: "elyssa@doctor.com",
@@ -362,7 +362,7 @@ const doctors = [
     }
   },
   {
-    name: "Erika",
+    firstName: "Erika",
     paternalLastName: "Cruz",
     specialty: "Medicina interna",
     email: "erika@doctor.com",
@@ -375,7 +375,7 @@ const doctors = [
     }
   },
   {
-    name: "Esmeralda",
+    firstName: "Esmeralda",
     paternalLastName: "Morales",
     specialty: "Alergología",
     email: "esmeralda@doctor.com",
@@ -388,7 +388,7 @@ const doctors = [
     }
   },
   {
-    name: "Estefania",
+    firstName: "Estefania",
     paternalLastName: "Valenzuela",
     specialty: "Neumología",
     email: "estefania@doctor.com",
@@ -401,7 +401,7 @@ const doctors = [
     }
   },
   {
-    name: "Evelyn",
+    firstName: "Evelyn",
     paternalLastName: "Dominguez",
     specialty: "Endocrinología",
     email: "evelyn@doctor.com",
@@ -414,7 +414,7 @@ const doctors = [
     }
   },
   {
-    name: "Felicia",
+    firstName: "Felicia",
     paternalLastName: "Briseño",
     specialty: "Medicina interna",
     email: "felicia@doctor.com",
@@ -427,7 +427,7 @@ const doctors = [
     }
   },
   {
-    name: "Fernanda",
+    firstName: "Fernanda",
     paternalLastName: "Jimenez",
     specialty: "Oncología",
     email: "fernanda@doctor.com",
@@ -440,7 +440,7 @@ const doctors = [
     }
   },
   {
-    name: "Flor",
+    firstName: "Flor",
     paternalLastName: "Sanchez",
     specialty: "Traumatología",
     email: "flor@doctor.com",
@@ -453,7 +453,7 @@ const doctors = [
     }
   },
   {
-    name: "Gabriela",
+    firstName: "Gabriela",
     paternalLastName: "Briseño",
     specialty: "Otorrinolaringología",
     email: "gabriela@doctor.com",
@@ -466,7 +466,7 @@ const doctors = [
     }
   },
   {
-    name: "Gloria",
+    firstName: "Gloria",
     paternalLastName: "Lopez",
     specialty: "Dermatología",
     email: "gloria@doctor.com",
@@ -479,7 +479,7 @@ const doctors = [
     }
   },
   {
-    name: "Guadalupe",
+    firstName: "Guadalupe",
     paternalLastName: "Espinosa",
     specialty: "Urología",
     email: "guadalupe@doctor.com",
@@ -492,7 +492,7 @@ const doctors = [
     }
   },
   {
-    name: "Helena",
+    firstName: "Helena",
     paternalLastName: "Camargo",
     specialty: "Urología",
     email: "helena@doctor.com",
@@ -505,7 +505,7 @@ const doctors = [
     }
   },
   {
-    name: "Irma",
+    firstName: "Irma",
     paternalLastName: "Silva",
     specialty: "Traumatología",
     email: "irma@doctor.com",
@@ -518,7 +518,7 @@ const doctors = [
     }
   },
   {
-    name: "Isadora",
+    firstName: "Isadora",
     paternalLastName: "Montiel",
     specialty: "Angiología",
     email: "isadora@doctor.com",
@@ -531,7 +531,7 @@ const doctors = [
     }
   },
   {
-    name: "Itzel",
+    firstName: "Itzel",
     paternalLastName: "Espinosa",
     specialty: "Neumología",
     email: "itzel@doctor.com",
@@ -544,7 +544,7 @@ const doctors = [
     }
   },
   {
-    name: "Jazmin",
+    firstName: "Jazmin",
     paternalLastName: "Dominguez",
     specialty: "Oncología",
     email: "jazmin@doctor.com",
@@ -557,7 +557,7 @@ const doctors = [
     }
   },
   {
-    name: "Jennifer",
+    firstName: "Jennifer",
     paternalLastName: "Martinez",
     specialty: "Medicina familiar",
     email: "jennifer@doctor.com",
@@ -570,7 +570,7 @@ const doctors = [
     }
   },
   {
-    name: "Jessica",
+    firstName: "Jessica",
     paternalLastName: "Ornelas",
     specialty: "Pediatría",
     email: "jessica@doctor.com",
@@ -583,7 +583,7 @@ const doctors = [
     }
   },
   {
-    name: "Julia",
+    firstName: "Julia",
     paternalLastName: "Antonio",
     specialty: "Nefrología",
     email: "julia@doctor.com",
@@ -596,7 +596,7 @@ const doctors = [
     }
   },
   {
-    name: "Karen",
+    firstName: "Karen",
     paternalLastName: "Hernandez",
     specialty: "Psiquiatría",
     email: "karen@doctor.com",
@@ -609,7 +609,7 @@ const doctors = [
     }
   },
   {
-    name: "Karina",
+    firstName: "Karina",
     paternalLastName: "Cortes",
     specialty: "Urología",
     email: "karina@doctor.com",
@@ -622,7 +622,7 @@ const doctors = [
     }
   },
   {
-    name: "Karla",
+    firstName: "Karla",
     paternalLastName: "Briseño",
     specialty: "Traumatología",
     email: "karla@doctor.com",
@@ -635,7 +635,7 @@ const doctors = [
     }
   },
   {
-    name: "Katya",
+    firstName: "Katya",
     paternalLastName: "Valenzuela",
     specialty: "Medicina interna",
     email: "katya@doctor.com",
@@ -648,7 +648,7 @@ const doctors = [
     }
   },
   {
-    name: "Kimberly",
+    firstName: "Kimberly",
     paternalLastName: "Huerta",
     specialty: "Pediatría",
     email: "kimberly@doctor.com",
@@ -661,7 +661,7 @@ const doctors = [
     }
   },
   {
-    name: "Laura",
+    firstName: "Laura",
     paternalLastName: "Lima",
     specialty: "Geriatría",
     email: "laura@doctor.com",
@@ -674,7 +674,7 @@ const doctors = [
     }
   },
   {
-    name: "Liliana",
+    firstName: "Liliana",
     paternalLastName: "Gonzalez",
     specialty: "Traumatología",
     email: "liliana@doctor.com",
@@ -687,7 +687,7 @@ const doctors = [
     }
   },
   {
-    name: "Lisa",
+    firstName: "Lisa",
     paternalLastName: "Fermin",
     specialty: "Angiología",
     email: "lisa@doctor.com",
@@ -700,7 +700,7 @@ const doctors = [
     }
   },
   {
-    name: "Lizbeth",
+    firstName: "Lizbeth",
     paternalLastName: "Montiel",
     specialty: "Medicina familiar",
     email: "lizbeth@doctor.com",
@@ -713,7 +713,7 @@ const doctors = [
     }
   },
   {
-    name: "Lizeth",
+    firstName: "Lizeth",
     paternalLastName: "Montiel",
     specialty: "Medicina interna",
     email: "lizeth@doctor.com",
@@ -726,7 +726,7 @@ const doctors = [
     }
   },
   {
-    name: "Lupita",
+    firstName: "Lupita",
     paternalLastName: "Fermin",
     specialty: "Endocrinología",
     email: "lupita@doctor.com",
@@ -739,7 +739,7 @@ const doctors = [
     }
   },
   {
-    name: "Margarita",
+    firstName: "Margarita",
     paternalLastName: "Aguilar",
     specialty: "Ginecología y obstetricia",
     email: "margarita@doctor.com",
@@ -752,7 +752,7 @@ const doctors = [
     }
   },
   {
-    name: "Maria",
+    firstName: "Maria",
     paternalLastName: "Torres",
     specialty: "Neurología",
     email: "maria@doctor.com",
@@ -765,7 +765,7 @@ const doctors = [
     }
   },
   {
-    name: "Mariana",
+    firstName: "Mariana",
     paternalLastName: "Antonio",
     specialty: "Otorrinolaringología",
     email: "mariana@doctor.com",
@@ -778,7 +778,7 @@ const doctors = [
     }
   },
   {
-    name: "Maribel",
+    firstName: "Maribel",
     paternalLastName: "Martin",
     specialty: "Alergología",
     email: "maribel@doctor.com",
@@ -791,7 +791,7 @@ const doctors = [
     }
   },
   {
-    name: "Marisol",
+    firstName: "Marisol",
     paternalLastName: "Espinosa",
     specialty: "Reumatología",
     email: "marisol@doctor.com",
@@ -804,7 +804,7 @@ const doctors = [
     }
   },
   {
-    name: "Marlene",
+    firstName: "Marlene",
     paternalLastName: "Valenzuela",
     specialty: "Otorrinolaringología",
     email: "marlene@doctor.com",
@@ -817,7 +817,7 @@ const doctors = [
     }
   },
   {
-    name: "Martha",
+    firstName: "Martha",
     paternalLastName: "Silva",
     specialty: "Angiología",
     email: "martha@doctor.com",
@@ -830,7 +830,7 @@ const doctors = [
     }
   },
   {
-    name: "Maya",
+    firstName: "Maya",
     paternalLastName: "Hernandez",
     specialty: "Medicina interna",
     email: "maya@doctor.com",
@@ -843,7 +843,7 @@ const doctors = [
     }
   },
   {
-    name: "Melissa",
+    firstName: "Melissa",
     paternalLastName: "Lopez",
     specialty: "Neumología",
     email: "melissa@doctor.com",
@@ -856,7 +856,7 @@ const doctors = [
     }
   },
   {
-    name: "Michelle",
+    firstName: "Michelle",
     paternalLastName: "Dominguez",
     specialty: "Gastroenterología",
     email: "michelle@doctor.com",
@@ -869,7 +869,7 @@ const doctors = [
     }
   },
   {
-    name: "Miriam",
+    firstName: "Miriam",
     paternalLastName: "Lima",
     specialty: "Traumatología",
     email: "miriam@doctor.com",
@@ -882,7 +882,7 @@ const doctors = [
     }
   },
   {
-    name: "Nadia",
+    firstName: "Nadia",
     paternalLastName: "Martinez",
     specialty: "Endocrinología",
     email: "nadia@doctor.com",
@@ -895,7 +895,7 @@ const doctors = [
     }
   },
   {
-    name: "Nancy",
+    firstName: "Nancy",
     paternalLastName: "Pichardo",
     specialty: "Otorrinolaringología",
     email: "nancy@doctor.com",
@@ -908,7 +908,7 @@ const doctors = [
     }
   },
   {
-    name: "Natali",
+    firstName: "Natali",
     paternalLastName: "Huerta",
     specialty: "Dermatología",
     email: "natali@doctor.com",
@@ -921,7 +921,7 @@ const doctors = [
     }
   },
   {
-    name: "Natalia",
+    firstName: "Natalia",
     paternalLastName: "Andrade",
     specialty: "Urología",
     email: "natalia@doctor.com",
@@ -934,7 +934,7 @@ const doctors = [
     }
   },
   {
-    name: "Nelly",
+    firstName: "Nelly",
     paternalLastName: "Cortes",
     specialty: "Nefrología",
     email: "nelly@doctor.com",
@@ -947,7 +947,7 @@ const doctors = [
     }
   },
   {
-    name: "Olivia",
+    firstName: "Olivia",
     paternalLastName: "Torres",
     specialty: "Neumología",
     email: "olivia@doctor.com",
@@ -960,7 +960,7 @@ const doctors = [
     }
   },
   {
-    name: "Pamela",
+    firstName: "Pamela",
     paternalLastName: "Fermin",
     specialty: "Psiquiatría",
     email: "pamela@doctor.com",
@@ -973,7 +973,7 @@ const doctors = [
     }
   },
   {
-    name: "Paola",
+    firstName: "Paola",
     paternalLastName: "Aguilar",
     specialty: "Endocrinología",
     email: "paola@doctor.com",
@@ -986,7 +986,7 @@ const doctors = [
     }
   },
   {
-    name: "Paula",
+    firstName: "Paula",
     paternalLastName: "Cruz",
     specialty: "Ginecología y obstetricia",
     email: "paula@doctor.com",
@@ -999,7 +999,7 @@ const doctors = [
     }
   },
   {
-    name: "Paulina",
+    firstName: "Paulina",
     paternalLastName: "Antonio",
     specialty: "Traumatología",
     email: "paulina@doctor.com",
@@ -1012,7 +1012,7 @@ const doctors = [
     }
   },
   {
-    name: "Petra",
+    firstName: "Petra",
     paternalLastName: "Valenzuela",
     specialty: "Reumatología",
     email: "petra@doctor.com",
@@ -1025,7 +1025,7 @@ const doctors = [
     }
   },
   {
-    name: "Quetzalli",
+    firstName: "Quetzalli",
     paternalLastName: "Antonio",
     specialty: "Medicina familiar",
     email: "quetzalli@doctor.com",
@@ -1038,7 +1038,7 @@ const doctors = [
     }
   },
   {
-    name: "Regina",
+    firstName: "Regina",
     paternalLastName: "Jimenez",
     specialty: "Geriatría",
     email: "regina@doctor.com",
@@ -1051,7 +1051,7 @@ const doctors = [
     }
   },
   {
-    name: "Renata",
+    firstName: "Renata",
     paternalLastName: "Montiel",
     specialty: "Traumatología",
     email: "renata@doctor.com",
@@ -1064,7 +1064,7 @@ const doctors = [
     }
   },
   {
-    name: "Samantha",
+    firstName: "Samantha",
     paternalLastName: "Altamirano",
     specialty: "Otorrinolaringología",
     email: "samantha@doctor.com",
@@ -1077,7 +1077,7 @@ const doctors = [
     }
   },
   {
-    name: "Sandra",
+    firstName: "Sandra",
     paternalLastName: "Ornelas",
     specialty: "Oncología",
     email: "sandra@doctor.com",
@@ -1090,7 +1090,7 @@ const doctors = [
     }
   },
   {
-    name: "Sara",
+    firstName: "Sara",
     paternalLastName: "Jimenez",
     specialty: "Pediatría",
     email: "sara@doctor.com",
@@ -1103,7 +1103,7 @@ const doctors = [
     }
   },
   {
-    name: "Silvia",
+    firstName: "Silvia",
     paternalLastName: "Contreras",
     specialty: "Gastroenterología",
     email: "silvia@doctor.com",
@@ -1116,7 +1116,7 @@ const doctors = [
     }
   },
   {
-    name: "Sofia",
+    firstName: "Sofia",
     paternalLastName: "Valenzuela",
     specialty: "Neurología",
     email: "sofia@doctor.com",
@@ -1129,7 +1129,7 @@ const doctors = [
     }
   },
   {
-    name: "Tania",
+    firstName: "Tania",
     paternalLastName: "Jimenez",
     specialty: "Angiología",
     email: "tania@doctor.com",
@@ -1142,7 +1142,7 @@ const doctors = [
     }
   },
   {
-    name: "Tina",
+    firstName: "Tina",
     paternalLastName: "Sanchez",
     specialty: "Endocrinología",
     email: "tina@doctor.com",
@@ -1155,7 +1155,7 @@ const doctors = [
     }
   },
   {
-    name: "Valeria",
+    firstName: "Valeria",
     paternalLastName: "Cruz",
     specialty: "Endocrinología",
     email: "valeria@doctor.com",
@@ -1168,7 +1168,7 @@ const doctors = [
     }
   },
   {
-    name: "Veronica",
+    firstName: "Veronica",
     paternalLastName: "Aguilar",
     specialty: "Oncología",
     email: "veronica@doctor.com",
@@ -1181,7 +1181,7 @@ const doctors = [
     }
   },
   {
-    name: "Victoria",
+    firstName: "Victoria",
     paternalLastName: "Briseño",
     specialty: "Traumatología",
     email: "victoria@doctor.com",
@@ -1194,7 +1194,7 @@ const doctors = [
     }
   },
   {
-    name: "Wanda",
+    firstName: "Wanda",
     paternalLastName: "Esparza",
     specialty: "Neurología",
     email: "wanda@doctor.com",
@@ -1207,7 +1207,7 @@ const doctors = [
     }
   },
   {
-    name: "Ximena",
+    firstName: "Ximena",
     paternalLastName: "Camargo",
     specialty: "Nefrología",
     email: "ximena@doctor.com",
@@ -1220,7 +1220,7 @@ const doctors = [
     }
   },
   {
-    name: "Yaretzi",
+    firstName: "Yaretzi",
     paternalLastName: "Martinez",
     specialty: "Medicina familiar",
     email: "yaretzi@doctor.com",
@@ -1233,7 +1233,7 @@ const doctors = [
     }
   },
   {
-    name: "Zita",
+    firstName: "Zita",
     paternalLastName: "Esparza",
     specialty: "Nefrología",
     email: "zita@doctor.com",
