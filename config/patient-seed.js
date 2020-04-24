@@ -71,11 +71,19 @@ const patients = [
   }
 ];
 
-Patient.collection.drop();
-
-Patient.create(patients)
-  .then(newPatients => {
-    console.log(`Created ${newPatients.length} patients`);
-    mongoose.connection.close();
-  })
-  .catch(err => console.log("error ", err));
+Patient.deleteMany()
+.then(() => {
+  return Patient.create(patients);
+})
+.then(newPatients => {
+  console.log(`${newPatients.length} patients created with the following id:`);
+  console.log(newPatients.map(u => u._id));
+})
+.then(() => {
+  // Close properly the connection to Mongoose
+  mongoose.disconnect();
+})
+.catch(err => {
+  mongoose.disconnect();
+  throw err;
+});
