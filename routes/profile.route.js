@@ -53,7 +53,6 @@ router.get("/patient/:patientID", async (req, res, next) => {
     user.age = Math.floor((currentDate - birthdate) / 31536000000);
   }
 
-  console.log(user);
   res.render("profile-patient", { user });
 });
 
